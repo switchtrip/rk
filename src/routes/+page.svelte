@@ -1,6 +1,6 @@
 <body class="min-h-screen grid gap-6 content-center justify-center justify-items-center">
 <h1 class="font-serif text-9xl text-center ">Random bg</h1>
-<button class="font-mono text-4xl font-black text-white bg-black hover:shadow-md hover:shadow-black transition duration-200 rounded-full p-9 my-7 w-max h-max" on:click={cbg}>
+<button class="font-sans text-4xl font-black text-white bg-black hover:shadow-md hover:shadow-black transition duration-200 rounded-full p-9 my-7 w-max h-max" on:click={cbg}>
         Try!!
 </button>
 </body>
