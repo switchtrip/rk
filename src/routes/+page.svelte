@@ -29,22 +29,26 @@
         blobH = `${gRI(400, 50)}px`;
         blobW = `${gRI(400, 50)}px`;
     }
-    function getRadius(a, b, c, d){
+    function getRadius(a=50, b=50, c=50, d=50){
       return `${a}% ${100-a}% ${b}% ${100-b}% / ${c}% ${100-d}% ${d}% ${100-c}%`;
     }
 </script>
 
-<main style="background-color:{mainBg}" class="w-screen h-screen grid gap-6 content-center bg-slate-600 justify-center justify-items-center">
-<h1 class="font-serif text-9xl text-center ">Random bg</h1>
-<button style="background:{btnBg}; color:{btnFg}" class="font-sans text-4xl font-black text-white bg-black hover:shadow-md hover:shadow-black transition duration-200 rounded-full p-9 my-7 w-max h-max" on:click={cbg}>
+<main style="background-color:{mainBg}" class="w-screen h-screen grid gap-8 md:gap-16 content-center bg-slate-600 justify-center justify-items-center">
+<h1 class=" font-serif text-7xl md:text-9xl p-2 md:p-4 text-center ">Random bg</h1>
+<button  class="font-sans text-2xl md:text-4xl font-black text-white bg-black hover:shadow-md hover:shadow-black active:translate-y-1 transition duration-200 rounded-full p-6 md:p-9  w-max h-max" style="background:{btnBg}; color:{btnFg}" on:click={cbg}>
         Try!!
 </button>
 <div class="bubble" style="width:{blobW}; height:{blobH}; background:{btnBg}; top:{blobTop}; right:{blobRight}; border-radius:{dataBorder}"></div>
 </main>
 
 <style>
+  *{
+    overflow:hidden;
+  }
   .bubble{
     position: fixed;
+    overflow: hidden;
     width:180px;
     height:280px;
     background-color: crimson;
