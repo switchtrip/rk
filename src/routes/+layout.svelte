@@ -1,6 +1,6 @@
 <script>
   import "../app.pcss";
-  import { base } from '$app/paths';
+  // import { base } from '$app/paths';
 </script>
 
 <nav class="flex items-center justify-center gap-5 p-4 text-white bg-gradient-to-r from-slate-900 to-slate-500">

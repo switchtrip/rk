@@ -1,7 +1,7 @@
 <script>
   /** @type {import('./$types').PageData} */
   export let data;
-  import { base } from '$app/paths';
+//   import { base } from '$app/paths';
   import * as Collapsible from "$lib/components/ui/collapsible";
   import { ChevronsDown, Smile } from "lucide-svelte";
   import * as Carousel from "$lib/components/ui/carousel/index.js";
@@ -17,8 +17,8 @@
   //     const gall = e.target.nextElementSibling;
   //     gall.classList.toggle("collapse");
   //   }
-  const b = base==="." ? "":base;
-  console.log("this is:", b);
+//   const b = base==="." ? "":base;
+//   console.log("this is:", b);
 </script>
 
 {#each data.gallery as event}
