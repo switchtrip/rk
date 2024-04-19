@@ -1,9 +1,5 @@
 const fs = require('fs').promises;
 
-const pathToStatic = '../static/'
-const dirName = pathToStatic + 'images/gallery/30jan/';
-const filename = './test.json';
-const acceptedImageTypes = ['png', 'jpeg', 'jpg', 'gif', 'svg', 'webp', 'avi'];
 
 
 async function getImagesFiles(dirName){
@@ -54,4 +50,9 @@ async function final(dirName, filename){
     console.log(json);
     await fs.writeFile(filename, json, 'utf8');
 }
+
+const pathToStatic = '../static/'
+const dirName = pathToStatic + 'images/gallery/FluteWorkshop2014/';
+const filename = '../static/data/gallery.json';
+const acceptedImageTypes = ['png', 'jpeg', 'jpg', 'gif', 'svg', 'webp', 'avi'];
 final(dirName, filename).then();
