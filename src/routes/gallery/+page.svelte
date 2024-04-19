@@ -18,7 +18,7 @@
   //     gall.classList.toggle("collapse");
   //   }
   const b = base==="." ? "":base;
-  console.log("this is:", base);
+  console.log("this is:", b);
 </script>
 
 {#each data.gallery as event}
@@ -38,7 +38,7 @@
         {#each event.images as image}
           <!-- <Carousel.Item class="max-w-[250px] sm:max-w-[400px]"> -->
           <Carousel.Item class="sm:basis-2/3 max-w-[600px]">
-            <img style="object-cover" loading="lazy" src={b+image.url} alt={image.caption} />
+            <img style="object-cover" loading="lazy" src={image.url} alt={image.caption} />
           </Carousel.Item>
         {/each}
       </Carousel.Content>
@@ -62,7 +62,7 @@
             <div class="gallery-item">
               <GalleryThumbnail>
                 <!-- <a href={image.url} data-lightbox={event.eventName}> -->
-                <img loading="lazy" src={b+image.url} alt={image.caption} />
+                <img loading="lazy" src={image.url} alt={image.caption} />
                 <!-- </a> -->
               </GalleryThumbnail>
               </div>
@@ -71,7 +71,7 @@
         </svelte:fragment>
         {#each event.images as image}
           <GalleryImage>
-            <img loading="lazy" src={b+image.url} alt={image.caption} />
+            <img loading="lazy" src={image.url} alt={image.caption} />
           </GalleryImage>
         {/each}
       </LightboxGallery>
