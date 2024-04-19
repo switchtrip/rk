@@ -35,7 +35,22 @@
     }
 </script>
 
-<main class="w-screen h-screen grid gap-8 md:gap-16 content-center bg-slate-600 justify-center justify-items-center">
+
+<svelte:head>
+  <title>Surabhi Music Academy</title>
+  <meta name="description" content="Testing Svelte app for Surabhi music app dev" />
+  <!-- For sharing -->
+  <meta property="og:title" content="Surabhi Music Academy" />
+  <meta property="og:description" content="Learn Flute, Mouth organ, Hindustani classical Music"/>
+  <meta property="og:image" content="https://surabhimusic.com/logo" />
+  <meta property="og:url" content="https://surabhimusic.com" />
+  <link rel="canonical" href="https://surabhimusic.com/" />
+</svelte:head>
+
+
+
+
+<main class="h-screen grid gap-8 md:gap-16 content-center bg-slate-600 justify-center justify-items-center">
 <h1 class=" font-serif text-7xl md:text-9xl p-2 md:p-4 text-center ">Random bg</h1>
 <button  class="font-sans text-2xl md:text-4xl font-black text-white bg-black hover:shadow-md hover:shadow-black active:translate-y-1 transition duration-100 rounded-full p-6 md:p-9  w-max h-max" style="background:{btnBg}; color:{btnFg}" on:click={cbg}>
         Try!!
@@ -46,7 +61,6 @@
 <style>
   :root{
     --mainBg: rgb(200, 200, 200);
-    overflow:hidden;
   }
   main{
     background-color:var(--mainBg);
