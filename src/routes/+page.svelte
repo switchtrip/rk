@@ -6,7 +6,8 @@
   let blobTop = "30%";
   let blobRight = "30%";
   let blobH = "100px";
-  let blobW = "100px";
+  let blobW = "80px";
+
     function gRI(max=100, min=0) {
         return Math.floor(Math.random() * (max-min)+min);
     }
