@@ -21,7 +21,7 @@
 {#each data.gallery as event}
   <Collapsible.Root class="border-2 border-[#38bdf9] rounded-lg sm:p-10 p-2 mb-10">
     <div class="text-slate-300 sm:p-2 sm:py-3 flex gap-5 justify-between">
-      <h1 class="text-lg sm:text-4xl py-8 sm:pb-10 ">{event.eventName}</h1>
+      <h1 class="text-xl sm:text-4xl py-8 sm:pb-10 ">{event.eventName}</h1>
     </div>
     <Carousel.Root
       class="w-11/12 m-auto"
@@ -34,7 +34,7 @@
       <Carousel.Content>
         {#each event.images as image}
           <!-- <Carousel.Item class="max-w-[250px] sm:max-w-[400px]"> -->
-          <Carousel.Item class="basis-2/3 max-w-[400px]">
+          <Carousel.Item class="sm:basis-2/3 max-w-[600px]">
             <img style="object-cover" loading="lazy" src={image.url} alt={image.caption} />
           </Carousel.Item>
         {/each}
