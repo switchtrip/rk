@@ -6,6 +6,7 @@
 <nav class="flex items-center justify-center gap-5 p-4 text-white bg-gradient-to-r from-slate-900 to-slate-500">
   <a href="{base}/">Home</a>
   <a href="{base}/gallery">Gallery</a>
+  <a href="{base}/experiment">Experiment</a>
   <!-- <a href="/">Home</a>
   <a href="/gallery">Gallery</a> -->
 </nav>

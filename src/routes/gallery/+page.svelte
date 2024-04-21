@@ -29,7 +29,7 @@
       <h1 class="text-xl sm:text-4xl py-8 sm:pb-10">{event.eventName}</h1>
     </div>
     <Carousel.Root
-      class="w-11/12 m-auto border-8 border-double border-slate-600 rounded-md p-4"
+      class="w-11/12 h-11/12 m-auto border-8 border-double border-slate-600 rounded-md p-4"
       opts={{
         align: "start",
         loop: true,
@@ -41,7 +41,7 @@
           <!-- <Carousel.Item class="max-w-[250px] sm:max-w-[400px]"> -->
           <Carousel.Item class="pl-1 sm:basis-2/3 max-w-[600px]">
             <img
-              style="object-cover"
+              class="h-full object-cover"
               loading="lazy"
               src="{base}/{image.url}"
               alt={image.caption}
