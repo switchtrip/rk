@@ -3,38 +3,37 @@
   import { base } from "$app/paths";
   import {ChevronLeft, ChevronRight} from "lucide-svelte";
   export let interval=5000;
-  let elemCarousel;
+  let el;
 
   function carouselLeft(){
-    if(elemCarousel){
+    if(el){
 	const x =
-    elemCarousel.scrollLeft === 0
-			? elemCarousel.clientWidth * elemCarousel.childElementCount // loop
-			: elemCarousel.scrollLeft - elemCarousel.clientWidth; // step left
-	elemCarousel.scroll(x, 0);
+    el.scrollLeft === 0
+			? el.clientWidth * el.childElementCount // loop
+			: el.scrollLeft - el.clientWidth; // step left
+	el.scroll(x, 0);
     }
 }
   function carouselRight(){
-    if(elemCarousel){
+    if(el){
 	const x =
-		elemCarousel.scrollLeft === elemCarousel.scrollWidth - elemCarousel.clientWidth
+		el.scrollLeft === el.scrollWidth - el.clientWidth
 			? 0 // loop
-			: elemCarousel.scrollLeft + elemCarousel.clientWidth; // step right
-	elemCarousel.scroll(x, 0);
+			: el.scrollLeft + el.clientWidth; // step right
+	el.scroll(x, 0);
     }
 }
-// setInterval(carouselRight, interval);
 </script>
 
 <div class="wrapper">
-<div bind:this={elemCarousel} class="snap-x scroll-px-4 snap-mandatory scroll-smooth flex gap-4 overflow-x-auto px-1 m-auto">
+<div bind:this={el} class="scroll-px-4 scroll-smooth flex gap-4 overflow-x-auto px-1 m-auto">
     <slot/>
 </div>
 <button id="left" class="text-slate-300"  on:click={carouselLeft}>
-    <ChevronLeft size={32} strokeWidth={3.5} class="mr-auto"/>
+    <ChevronLeft size={32} strokeWidth={3.5} class="mr-auto active:scale-150 transition duration-300"/>
 </button>
-<button id="right" class="text-slate-300"  on:click={carouselRight}>
-    <ChevronRight size={32} strokeWidth={3.5} class="ml-auto"/>
+<button id="right" class="text-slate-300 active:text-slate-50"  on:click={carouselRight}>
+    <ChevronRight size={32} strokeWidth={3.5} class="ml-auto active:scale-150 transition duration-300"/>
 </button>
 </div>
 
@@ -52,6 +51,9 @@ button{
     width: 20%;
     transform: translateY(-50%);
 }
+button:active{
+background: transparent;
+}
 #left{
 left: 0;
 background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
@@ -59,5 +61,9 @@ background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
 #right{
 right: 0;
 background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+#right:active{
+right: 0;
+background: transparent;
 }
 </style>
