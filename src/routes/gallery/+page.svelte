@@ -10,7 +10,7 @@
 
 {#each data.gallery as event}
 
-<a id="{event.eventName}" href="{base}{$page.url.pathname}/{event.eventName}">
+<a id="{event.eventName}" href="{$page.url.pathname}/{event.eventName}">
     <h1 class="text-lg py-2 sm:text-xl lg:text-2xl sm:py-8 sm:pb-10">{event.eventName}</h1>
 </a>
   <Mycarousel>
