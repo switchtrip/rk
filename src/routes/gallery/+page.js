@@ -1,7 +1,5 @@
 /** @type {import('./$types').PageLoad} */
+import galleryList from '$lib/data/gallery.json';
 export async function load({fetch}) {
-    const resp = await fetch('data/gallery.json');
-    const data = await resp.json();
-    return {"gallery": data};
+    return {"gallery": galleryList};
 };
-// export const ssr = false;

@@ -2,7 +2,6 @@
     /** @type {import('./$types').PageData} */
   import { base } from "$app/paths";
   import {ChevronLeft, ChevronRight} from "lucide-svelte";
-  export let interval=5000;
   let el;
 
   function carouselLeft(){
@@ -25,7 +24,7 @@
 }
 </script>
 
-<div class="wrapper">
+<div class="relative p-0 m-0">
 <div bind:this={el} class="scroll-px-4 scroll-smooth flex gap-4 overflow-x-auto px-1 m-auto">
     <slot/>
 </div>
@@ -38,12 +37,6 @@
 </div>
 
 <style>
-.wrapper{
-    position: relative;
-    /* border: 5px solid white; */
-    padding: 0;
-    margin: 0;
-}
 button{
     position: absolute;
     top: 50%;

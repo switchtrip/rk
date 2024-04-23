@@ -4,29 +4,34 @@
   import { getDrawerStore } from "@skeletonlabs/skeleton";
   const links = [
     {
-      href: base + "/",
-      label: "Home",
-      keywords: ["home", "surabhi", "main", "classes"],
+      href: base + "/classes",
+      label: "Classes",
+    },
+    {
+      href: base + "/events",
+      label: "Events",
     },
     {
       href: base + "/gallery",
       label: "Gallery",
-      keywords: ["home", "surabhi", "main", "classes"],
     },
     {
-      href: base + "/experiment",
-      label: "Experiment",
-      keywords: ["home", "surabhi", "main", "classes"],
+      href: base + "/collection",
+      label: "Collection",
+    },
+    {
+      href: base + "/contact",
+      label: "Contact",
     },
   ];
-  $: listboxItemActive = (href) => $page.url.pathname == href ? "bg-primary-active-token" : "";
-  export let classl = "";
+  $: listboxItemActive = (href) =>
+    $page.url.pathname == href ? "bg-primary-active-token" : "";
 
   const drawerStore = getDrawerStore();
 </script>
 
 <nav>
-  <ul class="list-nav {classl}">
+  <ul class="list-nav {$$restProps.class || ''}">
     {#each links as link}
       <li>
         <a

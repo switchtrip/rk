@@ -59,10 +59,10 @@
     </a>
   </svelte:fragment>
   <svelte:fragment slot="trail">
-  <div class="hidden md:block">
-    <Navigation classl="flex gap-0"/>
+  <div class="hidden sm:block">
+    <Navigation class="flex gap-1"/>
   </div>
-    <button on:click={drawerOpen} class="btn-icon btn-icon-sm md:!hidden">
+    <button on:click={drawerOpen} class="btn-icon btn-icon-sm sm:!hidden">
       <Menu />
     </button>
   </svelte:fragment>

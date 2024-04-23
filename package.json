@@ -33,6 +33,7 @@
     "clsx": "^2.1.0",
     "embla-carousel-autoplay": "^8.0.2",
     "embla-carousel-svelte": "^8.0.2",
+    "gsap": "^3.12.5",
     "lightbox2": "^2.11.4",
     "lucide-svelte": "^0.371.0",
     "tailwind-merge": "^2.2.2",
