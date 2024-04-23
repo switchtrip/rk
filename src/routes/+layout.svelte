@@ -31,7 +31,16 @@
   }
 
 </script>
-
+<svelte:head>
+  <title>Surabhi Music Academy</title>
+  <meta name="description" content="Testing Svelte app for Surabhi music app dev" />
+  <!-- For sharing -->
+  <meta property="og:title" content="Surabhi Music Academy" />
+  <meta property="og:description" content="Learn Flute, Mouth organ, Hindustani classical Music"/>
+  <meta property="og:image" content="https://surabhimusic.com/logo" />
+  <meta property="og:url" content="https://surabhimusic.com" />
+  <link rel="canonical" href="https://surabhimusic.com/" />
+</svelte:head>
 <Drawer>
   <div
     class="grid grid-rows-3 h-full"
