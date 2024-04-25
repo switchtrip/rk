@@ -1,53 +1,60 @@
 <script>
+  import { BlueNight } from "@skeletonlabs/skeleton";
   import { gsap } from "gsap";
-  import { Palette } from "lucide-svelte";
+  import { TextPlugin } from "gsap/dist/TextPlugin";
   import { onMount } from "svelte";
 
-  function gRI(max = 100, min = 0) {
-    return Math.floor(Math.random() * (max - min) + min);
-  }
-  function gRC() {
-    const r = gRI(255);
-    const g = gRI(255);
-    const b = gRI(255);
-    return `rgb(${r} ${g} ${b})`;
-  }
-  function getRadius(a = 50, b = 50, c = 50, d = 50) {
-    return `${a}% ${100 - a}% ${b}% ${100 - b}% / ${c}% ${100 - d}% ${d}% ${100 - c}%`;
-  }
-  function cbg() {
-    gsap.to(".bubble", {
-      duration: 1,
-      top: `${gRI(80)}%`,
-      right: `${gRI(80)}%`,
-      height: `${gRI(400, 50)}px`,
-      width: `${gRI(400, 50)}px`,
-      "border-radius": getRadius(
-        gRI(80, 20),
-        gRI(80, 20),
-        gRI(80, 20),
-        gRI(80, 20)
-      ),
-      background: `linear-gradient(to bottom, ${gRC()}, 90%, ${gRC()})`,
+  function animate() {
+    gsap.registerPlugin(TextPlugin);
+    gsap.defaults({ ease: "none" });
+    const st = { repeat: -1, repeatDelay: 1 };
+    const tl = gsap.timeline(st);
+    tl.from("#learn", {
+      opacity:0,
+      duration: 2.5
     });
-    gsap.to("main", {
-      duration: 1,
-      background: `linear-gradient(to bottom, ${gRC()}, 90%, ${gRC()})`,
+
+    tl.from("#music", {
+      opacity:0,
+      duration: 2.5
     });
+
+    tl.to("h1 span", {
+      text: "Flute",
+      duration: 1,
+      repeat: 1,
+      repeatDelay: 1,
+      yoyo: true,
+    })
+      .to("h1 span", {
+        text: "Harmonica",
+        duration: 1,
+        repeat: 1,
+        repeatDelay: 1,
+        yoyo: true,
+      })
+      .to("h1 span", {
+        text: "Classical",
+        duration: 1,
+        repeat: 1,
+        repeatDelay: 1,
+        yoyo: true,
+      })
+
   }
+  onMount(() => {
+    // animate();
+  });
 </script>
 
-<main
-  class="h-screen grid gap-8 md:gap-16 content-center bg-slate-600 justify-center justify-items-center"
->
-  <h1 class=" font-serif text-7xl md:text-9xl p-2 md:p-4 text-center">
-    Random bg
+<div class="grid grid-rows-3 gap items-center justify-items-center">
+  <h3 id="learn" class="text-3xl font-semibold p-2 ">Learn</h3>
+  <h1 class="h1 text-4xl font-extrabold">
+    <span
+      class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone tracking-[0.1em]"
+    > 
+    </span>
   </h1>
-  <button
-    class="z-10 hover:shadow-md hover:shadow-black active:translate-y-1 active:shadow-none transition duration-100 rounded-full p-6 md:p-9 w-max h-max"
-    on:click={cbg}
-  >
-    <Palette />
-  </button>
-  <div class="bubble fixed w-11 h-20 overflow-hidden opacity-50 bg-primary"></div>
-</main>
+  <h1 id="music" class="text-3xl font-bold text-slate-300 place-self-center uppercase tracking-[0.1em]">Music</h1>
+  <h1 class="h1" >Test message</h1>
+</div>

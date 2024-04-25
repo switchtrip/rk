@@ -28,4 +28,3 @@
     {/each}
   </Mycarousel>
 {/each}
-<style></style>

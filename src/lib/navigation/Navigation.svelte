@@ -4,6 +4,10 @@
   import { getDrawerStore } from "@skeletonlabs/skeleton";
   const links = [
     {
+      href: base + "/",
+      label: "Home",
+    },
+    {
       href: base + "/classes",
       label: "Classes",
     },

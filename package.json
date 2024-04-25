@@ -36,6 +36,7 @@
     "gsap": "^3.12.5",
     "lightbox2": "^2.11.4",
     "lucide-svelte": "^0.371.0",
+    "simple-icons": "^11.13.0",
     "tailwind-merge": "^2.2.2",
     "tailwind-variants": "^0.2.1"
   }

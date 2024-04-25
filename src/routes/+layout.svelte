@@ -2,12 +2,16 @@
   import "../app.pcss";
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-  import { AppBar } from "@skeletonlabs/skeleton";
+  import { AppShell } from "@skeletonlabs/skeleton";
   import logo from "$lib/assets/surabhi_trademark_nobg.png";
   import { initializeStores } from "@skeletonlabs/skeleton";
   import { Menu, X } from "lucide-svelte";
   import { Drawer, getDrawerStore } from "@skeletonlabs/skeleton";
   import Navigation from "$lib/navigation/Navigation.svelte";
+  // import Footer from "$lib/components/Footer.svelte";
+  import Footer from "$lib/components/Footer/Footer.svelte";
+  import Header from "$lib/components/Header/Header.svelte";
+
   initializeStores();
 
   const drawerStore = getDrawerStore();
@@ -19,7 +23,7 @@
       // bgDrawer: "bg-purple-900 text-white",
       // bgBackdrop:
       //   "bg-gradient-to-tr from-indigo-500/50 via-purple-500/50 to-pink-500/50",
-      width: "w-[280px] md:w-[480px]",
+      width: "w-9/12 md:w-[480px]",
       padding: "p-0",
       position: "right",
     };
@@ -29,22 +33,32 @@
   function drawerClose() {
     drawerStore.close();
   }
-
 </script>
+
 <svelte:head>
   <title>Surabhi Music Academy</title>
-  <meta name="description" content="Testing Svelte app for Surabhi music app dev" />
+  <meta
+    name="description"
+    content="Testing Svelte app for Surabhi music app dev"
+  />
   <!-- For sharing -->
   <meta property="og:title" content="Surabhi Music Academy" />
-  <meta property="og:description" content="Learn Flute, Mouth organ, Hindustani classical Music"/>
+  <meta
+    property="og:description"
+    content="Learn Flute, Mouth organ, Hindustani classical Music"
+  />
   <meta property="og:image" content="https://surabhimusic.com/logo" />
   <meta property="og:url" content="https://surabhimusic.com" />
   <link rel="canonical" href="https://surabhimusic.com/" />
 </svelte:head>
+
+
+
+
+
+<!-- Mobile view drawer -->
 <Drawer>
-  <div
-    class="grid grid-rows-3 h-full"
-  >
+  <div class="grid grid-rows-[1fr_auto_1fr] h-full">
     <button
       on:click={drawerClose}
       class="btn-icon btn-icon-sm absolute top-5 right-5"
@@ -52,31 +66,20 @@
       <X />
     </button>
     <!-- Nav Links -->
-    <section class="row-start-2 p-4 pb-20 space-y-4 overflow-y-auto">
-      <Navigation/>
+    <section class="row-start-2 space-y-4 overflow-y-auto">
+      <Navigation class="grid [&>li>a]:block [&>li>a]:p-8 [&>li>a]:text-center"/>
     </section>
   </div>
 </Drawer>
-<AppBar class="py-1" shadow="shadow-2xl">
-  <svelte:fragment slot="lead">
-    <a
-      class="lg:!ml-0 lg:w-[82px] w-[60px] overflow-hidden"
-      href="{base}/"
-      title="Surabhi Homepage"
-    >
-      <img src={logo} alt="Surabhi" class="" />
-    </a>
+
+<AppShell>
+	<svelte:fragment slot="header">
+    <Header />
   </svelte:fragment>
-  <svelte:fragment slot="trail">
-  <div class="hidden sm:block">
-    <Navigation class="flex gap-1"/>
-  </div>
-    <button on:click={drawerOpen} class="btn-icon btn-icon-sm sm:!hidden">
-      <Menu />
-    </button>
-  </svelte:fragment>
-</AppBar>
-<slot />
+<!-- Page -->
+	<slot />
+	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
+</AppShell>
 
 <style>
 </style>
