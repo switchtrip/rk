@@ -33,7 +33,7 @@
   let tabSet = 0;
 </script>
 
-<div class="my-5 p-4 space-y-5">
+<div id="classes" class="my-5 p-4 space-y-5">
   <h1 class="h1 text-primary-600">Classes</h1>
   <p class="text-sm">
     Both offline and online classes are available for flute and mouth organ
