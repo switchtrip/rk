@@ -13,10 +13,6 @@
       opacity: 0,
       duration: 2.5,
     });
-    gsap.from("#music", {
-      opacity: 0,
-      duration: 2.5,
-    });
     const st = { repeat: -1, repeatDelay: 1 };
     const tl = gsap.timeline(st);
 
@@ -26,7 +22,15 @@
       repeat: 1,
       repeatDelay: 1,
       yoyo: true,
-    })
+    }, "start")
+      .to(
+        ".mai",
+        {
+          backgroundImage: `url(${base}/images/sir_ph.jpeg)`,
+          duration: 1,
+        },
+        "start"
+      )
       .to(
         "h1 span",
         {
@@ -93,9 +97,8 @@
     },
   ];
 </script>
-
 <div
-  class="mai w-full h-screen bg-[url('{base}/images/sir_ph.jpeg')] bg-cover bg-no-repeat bg-center"
+  class="mai w-full h-screen bg-cover bg-no-repeat bg-center"
 >
   <div class="bg-gradient-to-b from-black/60 to-black/90 w-full h-full">
     <div
@@ -168,7 +171,7 @@
 
 <style>
   .mai {
-    background-image: url(images/sir_ph.jpeg);
+    /* background-image: url(images/sir_ph.jpeg); */
     /* background-image: url(images/sir_anand_sam.jpeg); */
     /* background-image: url(images/sir_E_base.jpg); */
     /* background-image: url(images/sir_flute_D.png); */
