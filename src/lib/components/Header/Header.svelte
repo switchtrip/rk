@@ -30,7 +30,7 @@
     drawerStore.close();
   }
   </script>
-<AppBar class="py-1 z-20" shadow="shadow-lg">
+<AppBar class="py-4 z-20" shadow="shadow-lg">
   <svelte:fragment slot="lead">
     <a
       class="lg:!ml-0 lg:w-[82px] w-[60px] overflow-hidden"
@@ -46,7 +46,7 @@
       <Navigation class="list-nav flex gap-1" />
     </div>
     <button on:click={drawerOpen} class="btn-icon btn-icon-sm sm:!hidden">
-      <Menu />
+      <Menu size=40 />
     </button>
   </svelte:fragment>
 </AppBar>
