@@ -169,7 +169,12 @@
 </div>
 
 <div id="classes" class="mt-10 p-4 space-y-8">
-  <h2 class="h2">Classes</h2>
+  <h2 class="h1 anchor underline-offset-8">
+    <a
+      class="anchor"
+      href="{base}/classes#classes">Classes</a
+    >
+    </h2>
   <div class="pt-4">
     Both online and offline classes for Flute and Mouth organ are provided by
     Surabhi Music Academy. For details visit <a
