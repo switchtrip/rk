@@ -44,7 +44,8 @@
     <!-- Row 1 -->
     <section class={cRowOne}>
       <div class="grid justify-items-center gap-6">
-        <img src={logo} alt="Surabhi" class="w-14" />
+        <!-- <img src={logo} alt="Surabhi" class="w-14" /> -->
+      <img src="{base}/images/surabhi_trademark_nobg.png" alt="Logo" class="w-14" />
         <p class="!text-sm opacity-80">Flute and Harmonica Gurukul </p>
       </div>
       <!-- Current Version -->

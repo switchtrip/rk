@@ -37,7 +37,8 @@
       href="{base}/"
       title="Surabhi Homepage"
     >
-      <img src={logo} alt="Surabhi" class="" />
+      <!-- <img src={logo} alt="Surabhi" class="" /> -->
+      <img src="{base}/images/surabhi_trademark_nobg.png" alt="Logo" class="" />
     </a>
   </svelte:fragment>
   <svelte:fragment slot="trail">
