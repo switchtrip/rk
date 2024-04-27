@@ -67,7 +67,7 @@
     </button>
     <!-- Nav Links -->
     <section class="row-start-2 space-y-4 overflow-y-auto">
-      <Navigation class="grid [&>li>a]:block [&>li>a]:p-8 [&>li>a]:text-center"/>
+      <Navigation class="grid [&>li>a]:block [&>li>a]:p-[4vh] [&>li>a]:text-center"/>
     </section>
   </div>
 </Drawer>
@@ -77,7 +77,9 @@
     <Header />
   </svelte:fragment>
 <!-- Page -->
+ <!-- <div class="main max-w-7xl p-4 m-auto"> -->
 	<slot />
+<!-- </div> -->
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 </AppShell>
 

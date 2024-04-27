@@ -35,7 +35,7 @@
 </script>
 
 <nav>
-  <ul class="list-nav {$$restProps.class || ''}">
+  <ul class="{$$restProps.class || ''}">
     {#each links as link}
       <li>
         <a

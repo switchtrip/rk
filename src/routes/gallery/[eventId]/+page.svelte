@@ -8,11 +8,13 @@
   }
 </script>
 
-<div class="flex justify-between align-bottom">
-    <h1 class="text-lg py-2 sm:text-xl lg:text-2xl sm:py-8 sm:pb-10">{data.eventName}</h1>
+<div class="pt-10">
+<div class="flex justify-between ">
+    <h1 class="h1">{data.eventName}</h1>
   <button on:click={goBack} class="btn flex p-4">
-    <ChevronLeft /> <span>Back</span>
+    <ChevronLeft size=40/> 
   </button>
+</div>
 </div>
 <div class="gallery grid grid-cols-2 md:grid-cols-4 gap-2">
   {#each data.images as image}
