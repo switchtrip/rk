@@ -9,10 +9,6 @@
   function animate() {
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
-    gsap.from("#learn", {
-      opacity: 0,
-      duration: 2.5,
-    });
     const st = { repeat: -1, repeatDelay: 1 };
     const tl = gsap.timeline(st);
 
