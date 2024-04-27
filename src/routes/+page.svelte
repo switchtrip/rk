@@ -118,7 +118,7 @@
 </div>
 
 <div id="students" class="mt-10 p-4 space-y-4">
-  <h2 class="h2">Students Playing</h2>
+  <h2 class="h2">Performances</h2>
   <div class="pt-10 flex flex-col md:flex-row gap-5">
     {#each studentsEmbedLink as student}
       <div class="w-full max-w-[400px] mx-auto">
