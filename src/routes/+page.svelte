@@ -12,13 +12,17 @@
     const st = { repeat: -1, repeatDelay: 1 };
     const tl = gsap.timeline(st);
 
-    tl.to("h1 span", {
-      text: "Flute",
-      duration: 1,
-      repeat: 1,
-      repeatDelay: 1,
-      yoyo: true,
-    }, "start")
+    tl.to(
+      "h1 span",
+      {
+        text: "Flute",
+        duration: 1,
+        repeat: 1,
+        repeatDelay: 1,
+        yoyo: true,
+      },
+      "start"
+    )
       .to(
         ".mai",
         {
@@ -93,9 +97,8 @@
     },
   ];
 </script>
-<div
-  class="mai w-full h-screen bg-cover bg-no-repeat bg-center"
->
+
+<div class="mai w-full h-screen bg-cover bg-no-repeat bg-center">
   <div class="bg-gradient-to-b from-black/60 to-black/90 w-full h-full">
     <div
       class="pt-96 grid gap-5 items-center justify-items-center overflow-hidden"
@@ -168,10 +171,30 @@
 <div id="classes" class="mt-10 p-4 space-y-4">
   <h2 class="h2">Classes</h2>
   <div class="pt-4">
-    Both online and offline classes for Flute and Mouth organ are provided by Surabhi Music Academy.
-    For details visit <a class="anchor px-4" href="{base}/classes#classes">Classes page</a>
+    Both online and offline classes for Flute and Mouth organ are provided by
+    Surabhi Music Academy. For details visit <a
+      class="anchor px-4"
+      href="{base}/classes#classes">Classes page</a
+    >
+  </div>
+  <div class="my-10 pb-10 space-y-8 mx-auto w-full md:w-[40vw]">
+    <img
+      src="{base}/images/class-harmonica.webp"
+      alt="Harmonica Class"
+      class="mx-auto w-full aspect-square object-cover"
+    />
+    <h3 class="h3">Harmonica Class</h3>
+
+    <img
+      src="{base}/images/class-zoom-harmonica.jpeg"
+      alt="Harmonica Class"
+      class="mx-auto w-full aspect-square object-cover"
+    />
+    <h3 class="h3">Zoom Class</h3>
+
+  </div>
 </div>
-</div>
+
 <style>
   .mai {
     /* background-image: url(images/sir_ph.jpeg); */

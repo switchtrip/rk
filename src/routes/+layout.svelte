@@ -53,11 +53,8 @@
 </svelte:head>
 
 
-
-
-
 <!-- Mobile view drawer -->
-<Drawer>
+<Drawer class="z-50">
   <div class="grid grid-rows-[1fr_auto_1fr] h-full">
     <button
       on:click={drawerClose}
