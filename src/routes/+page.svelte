@@ -168,7 +168,7 @@
   </section>
 </div>
 
-<div id="classes" class="mt-10 p-4 space-y-4">
+<div id="classes" class="mt-10 p-4 space-y-8">
   <h2 class="h2">Classes</h2>
   <div class="pt-4">
     Both online and offline classes for Flute and Mouth organ are provided by
