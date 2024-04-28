@@ -30,7 +30,7 @@
     drawerStore.close();
   }
   </script>
-<AppBar class="py-2 z-20">
+<AppBar class="py-2 z-20" background='bg-transparent'>
   <svelte:fragment slot="lead">
     <a
       class="lg:!ml-0 lg:w-[82px] w-[60px] overflow-hidden"

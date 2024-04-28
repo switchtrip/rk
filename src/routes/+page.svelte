@@ -177,7 +177,8 @@
 </div>
 
 <div id="classes" class="pt-10 p-4 space-y-8">
-<div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');">
+<!-- <div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');"> -->
+<div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-center bg-no-repeat bg-cover" style="background-image:url('{base}/media/classes.jpeg');">
   <!-- Photo by <a href="https://unsplash.com/@saubhagya2304?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saubhagya gandharv</a> on <a href="https://unsplash.com/photos/A76xbfOeR5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
 </div>
   <h2 class="h1 underline-offset-8">

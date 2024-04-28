@@ -6,15 +6,48 @@
   // export let data;
 </script>
 
-<div class="pt-10 p-4 sm:p-8 md:p-12 space-y-10 max-w-7xl mx-auto">
-  <h1 class="h1">Contact</h1>
+<div
+  class="grid md:grid-cols-2 justify-center md:justify-normal text-center
+md:text-left pt-10 p-4 sm:p-8 md:p-12 space-y-10 max-w-7xl mx-auto"
+>
+  <h1 class="h1 md:col-span-2">Contact</h1>
 
   <div>
     <h2 class="h2 pb-4">Address:</h2>
     <Address />
+  </div>
+
+  <article class="my-4">
+    <h2 class="h3 pb-4">Call the master:</h2>
+
+    <div class="flex gap-5 justify-center md:justify-normal flex-wrap">
+      <a
+        class="btn btn-sm bg-gradient-to-br variant-gradient-primary-secondary flex gap-2 items-center"
+        href="tel:+919923155267"
+      >
+        <Phone class="size-4 md:size-6" />
+        <span class="num min-w-[10ch]">9923155267</span>
+      </a>
+      <!-- <span class="mx-4 py-0 text-4xl">|</span> -->
+      <a
+        class="btn btn-sm bg-gradient-to-br variant-gradient-primary-secondary flex gap-2 items-center"
+        href="tel:+918668204290"
+      >
+        <Phone class="size-4 md:size-6" />
+        <span class="num min-w-[10ch]">8668204290</span>
+      </a>
+    </div>
+  </article>
+<div class="">
+    <h3 class="h3 pb-4">Email:</h3>
+    <a class="no-underline anchor" href="mailto:sunilpatilpune@gmail.com"
+      >sunilpatilpune@gmail.com</a
+    ><br />
+  </div>
+  <div>
     <a
       aria-label="Chat on WhatsApp"
-      class="btn anchor px-0 py-4"
+      class="btn w-max p-0"
       href="https://wa.me/9923155267?text=I%20want%20to%20learn%20flute%2Fmouth%20organ%20"
       target="_blank"
       rel="noopener noreferrer"
@@ -25,33 +58,7 @@
       />
     </a>
   </div>
-
-  <article class="my-4">
-    <h2 class="h2 pb-4">Click to call:</h2>
-    <div class="flex">
-      <a
-        class="btn py-0 px-0 opacity-90 hover:opacity-100 flex gap-2 items-center anchor underline-offset-4"
-        href="tel:+919923155267"
-      >
-        <Phone class="size-4 md:size-6" />
-        <span class="num">9923155267</span>
-      </a>
-      <span class="mx-4 py-0">|</span>
-      <a
-        class="btn py-0 px-0 opacity-90 hover:opacity-100 flex gap-2 items-center anchor underline-offset-4"
-        href="tel:+918668204290"
-      >
-        <Phone class="size-4 md:size-6" />
-        <span class="num">8668204290</span>
-      </a>
-    </div>
-  </article>
-  <div class="pb-4">
-    <h3 class="h3 pb-4">Email:</h3>
-    <a class="btn px-0 anchor underline-offset-4" href="mailto:sunilpatilpune@gmail.com"
-      >sunilpatilpune@gmail.com</a
-    ><br />
-  </div>
+  
   <div class="max-w-[400px]">
     <iframe
       class="w-full aspect-square"

@@ -2,8 +2,8 @@ export const os = {
   name: "os",
   properties: {
     // =~= Theme Properties =~=
-    "--theme-font-family-base": `Poppins`,
-    "--theme-font-family-heading": `Quicksand`,
+    "--theme-font-family-base": `Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,	'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'`,
+    "--theme-font-family-heading": `Quicksand, system-ui`,
     "--theme-font-color-base": "0 0 0",
     "--theme-font-color-dark": "255 255 255",
     "--theme-rounded-base": "4px",
@@ -16,7 +16,7 @@ export const os = {
     "--on-success": "0 0 0",
     "--on-warning": "0 0 0",
     "--on-error": "255 255 255",
-    "--on-surface": "255 255 255",
+    "--on-surface": "var(--color-primary-400)",
     // =~= Theme Colors  =~=
     // primary | #ec612b
     "--color-primary-50": "252 231 223", // #fce7df
@@ -85,15 +85,26 @@ export const os = {
     "--color-error-800": "116 9 0", // #740900
     "--color-error-900": "95 7 0", // #5f0700
     // surface | #030303
-    "--color-surface-50": "217 217 217", // #d9d9d9
-    "--color-surface-100": "205 205 205", // #cdcdcd
-    "--color-surface-200": "192 192 192", // #c0c0c0
-    "--color-surface-300": "154 154 154", // #9a9a9a
-    "--color-surface-400": "79 79 79", // #4f4f4f
-    "--color-surface-500": "3 3 3", // #030303
-    "--color-surface-600": "3 3 3", // #030303
-    "--color-surface-700": "2 2 2", // #020202
-    "--color-surface-800": "2 2 2", // #020202
-    "--color-surface-900": "1 1 1", // #010101
+    // "--color-surface-50": "217 217 217", // #d9d9d9
+    // "--color-surface-100": "205 205 205", // #cdcdcd
+    // "--color-surface-200": "192 192 192", // #c0c0c0
+    // "--color-surface-300": "154 154 154", // #9a9a9a
+    // "--color-surface-400": "79 79 79", // #4f4f4f
+    // "--color-surface-500": "3 3 3", // #030303
+    // "--color-surface-600": "3 3 3", // #030303
+    // "--color-surface-700": "2 2 2", // #020202
+    // "--color-surface-800": "2 2 2", // #020202
+    // "--color-surface-900": "1 1 1", // #010101
+
+    "--color-surface-50": "227 222 218", // #e3deda
+    "--color-surface-100": "217 211 205", // #d9d3cd
+    "--color-surface-200": "208 200 193", // #d0c8c1
+    "--color-surface-300": "180 166 156", // #b4a69c
+    "--color-surface-400": "123 100 81", // #7b6451
+    "--color-surface-500": "67 33 7", // #432107
+    "--color-surface-600": "60 30 6", // #3c1e06
+    "--color-surface-700": "50 25 5", // #321905
+    "--color-surface-800": "40 20 4", // #281404
+    "--color-surface-900": "33 16 3", // #211003
   },
 };
