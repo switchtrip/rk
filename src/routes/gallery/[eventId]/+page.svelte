@@ -8,23 +8,25 @@
   }
 </script>
 
+<div class="pt-10 p-4 sm:p-8 md:p-12 space-y-10 max-w-7xl mx-auto">
 <div class="pt-10">
-<div class="flex justify-between ">
+  <div class="flex justify-between">
     <h1 class="h1">{data.eventName}</h1>
-  <button on:click={goBack} class="btn flex p-4">
-    <ChevronLeft size=40/> 
-  </button>
-</div>
+    <button on:click={goBack} class="btn flex p-4">
+      <ChevronLeft size="40" />
+    </button>
+  </div>
 </div>
 <div class="gallery grid grid-cols-2 md:grid-cols-4 gap-2">
   {#each data.images as image}
     <img
-      class="gallery-item w-full h-full object-cover "
+      class="gallery-item w-full h-full object-cover"
       loading="lazy"
       src="{base}/{image.url}"
       alt={image.caption}
     />
   {/each}
+</div>
 </div>
 
 <style>

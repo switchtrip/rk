@@ -41,7 +41,7 @@ button{
     position: absolute;
     top: 50%;
     height: 100%;
-    width: 20%;
+    width: 10%;
     transform: translateY(-50%);
 }
 button:active{

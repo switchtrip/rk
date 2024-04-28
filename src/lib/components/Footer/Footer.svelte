@@ -4,6 +4,7 @@
   import logo from "$lib/assets/surabhi_trademark_nobg.png";
   import Navigation from "$lib/navigation/Navigation.svelte";
   import { Phone } from "lucide-svelte";
+  import Address from "$lib/components/Footer/Address.svelte";
 
   // Base Classes
   const cBase =
@@ -74,20 +75,8 @@
           </a>
         {/each}
       </div>
-      <address class="text-center not-italic">
-        <a
-          href="https://maps.app.goo.gl/eCTb327uJZwrmbo48"
-          class=""
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span class="text-base font-black"> Surabhi Music Academy</span><br />
-          B/B-2, Katepuram (Phase 1), <br />
-          New Sangvi, Pimple Gurav <br />
-          Pune, Maharashtra-411061 <br />
-          <br /></a
-        >
-      </address>
+      <div class="text-center">
+     <Address /></div>
 
       <article class="text-center my-4 space-y-4">
         <p>Click to call:</p>

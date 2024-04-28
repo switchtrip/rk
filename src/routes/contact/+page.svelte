@@ -1,52 +1,60 @@
 <script>
   import { Phone } from "lucide-svelte";
-
+  import Address from "$lib/components/Footer/Address.svelte";
+  import { base } from "$app/paths";
   /** @type {import('./$types').PageData} */
   // export let data;
 </script>
 
-<div class="pt-10 p-4 space-y-10">
+<div class="pt-10 p-4 sm:p-8 md:p-12 space-y-10 max-w-7xl mx-auto">
   <h1 class="h1">Contact</h1>
-  <address class="not-italic">
+
+  <div>
+    <h2 class="h2 pb-4">Address:</h2>
+    <Address />
     <a
-      href="https://maps.app.goo.gl/eCTb327uJZwrmbo48"
-      class=""
+      aria-label="Chat on WhatsApp"
+      class="btn anchor px-0 py-4"
+      href="https://wa.me/9923155267?text=I%20want%20to%20learn%20flute%2Fmouth%20organ%20"
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
     >
-      <span class="text-base font-black"> Surabhi Music Academy</span><br />
-      B/B-2, Katepuram (Phase 1), <br />
-      New Sangvi, Pimple Gurav <br />
-      Pune, Maharashtra-411061 <br />
-      <br /></a
-    >
-    <article class="my-4 space-y-4">
-      <h3 class="h3">Click to call:</h3>
-      <div class="flex">
-        <a
-          class="opacity-90 hover:opacity-100 flex gap-1"
-          href="tel:+919923155267"
-        >
-          <Phone class="size-4 md:size-6" />
-          <span class="num">9923155267</span>
-        </a>
-        <span class="mx-4">|</span>
-        <a
-          class="opacity-90 hover:opacity-100 flex gap-1"
-          href="tel:+918668204290"
-        >
-          <Phone class="size-4 md:size-6" />
-          <span class="num">8668204290</span>
-        </a>
-      </div>
-    </article>
-    Email:
-    <a href="mailto:sunilpatilpune@gmail.com">sunilpatilpune@gmail.com</a>.<br
-    />
-  </address>
-  <div class="mx-auto">
+      <img
+        alt="Chat on WhatsApp"
+        src="{base}/ChatOnWhatsAppButton/WhatsAppButtonGreenSmall.svg"
+      />
+    </a>
+  </div>
+
+  <article class="my-4">
+    <h2 class="h2 pb-4">Click to call:</h2>
+    <div class="flex">
+      <a
+        class="btn py-0 px-0 opacity-90 hover:opacity-100 flex gap-2 items-center anchor underline-offset-4"
+        href="tel:+919923155267"
+      >
+        <Phone class="size-4 md:size-6" />
+        <span class="num">9923155267</span>
+      </a>
+      <span class="mx-4 py-0">|</span>
+      <a
+        class="btn py-0 px-0 opacity-90 hover:opacity-100 flex gap-2 items-center anchor underline-offset-4"
+        href="tel:+918668204290"
+      >
+        <Phone class="size-4 md:size-6" />
+        <span class="num">8668204290</span>
+      </a>
+    </div>
+  </article>
+  <div class="pb-4">
+    <h3 class="h3 pb-4">Email:</h3>
+    <a class="btn px-0 anchor underline-offset-4" href="mailto:sunilpatilpune@gmail.com"
+      >sunilpatilpune@gmail.com</a
+    ><br />
+  </div>
+  <div class="max-w-[400px]">
     <iframe
-    class="w-full aspect-square"
+      class="w-full aspect-square"
       title="Google map of Surabhi Music Academy"
       frameborder="no"
       scrolling="no"

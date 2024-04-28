@@ -64,8 +64,7 @@
       .to(
         ".mai",
         {
-          backgroundImage: `url(${base}/images/anand_performing.jpeg)`,
-          // backgroundImage: `url(${base}/images/sir_anand.jpeg)`,
+          backgroundImage: `url(${base}/images/sir_harmonica_flute_students.jpeg)`,
           duration: 1,
         },
         "perform"
@@ -120,11 +119,18 @@
   </div>
 </div>
 
+<div class="pt-10 p-4 sm:p-8 md:p-12 space-y-20 max-w-7xl mx-auto">
 <div id="students" class="mt-10 p-4 space-y-4">
+    <a href="{base}/gallery/">
+    
+  <div  class="btn w-20 h-20 rounded-full border-2 border-white bg-left bg-no-repeat bg-cover" style="background-image:url('{base}/media/mic.jpeg');">
+  </div>
+    </a>
   <h2 class="h2">Performances</h2>
-  <div class="pt-10 flex flex-col md:flex-row gap-5">
+  <p class="max-w-3xl">The academy's annual Harmonica Festival provides students a vibrant platform to showcase their musical prowess. </p>
+  <div class="pt-10 flex flex-col md:flex-row gap-5 flex-wrap justify-center">
     {#each studentsEmbedLink as student}
-      <div class="w-full max-w-[400px] mx-auto">
+      <div class="min-w-[450px] max-w-[400px]">
         <iframe
           class="w-full"
           height="315"
@@ -140,9 +146,11 @@
   </div>
 </div>
 
-<div id="about" class="my-20 p-4 space-y-8">
+<div id="about" class="pt-10 p-4 border-2 space-y-8">
+<div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-left bg-no-repeat bg-cover" style="background-image:url('{base}/media/diya.jpeg');">
+</div>
   <h2 class="h2">About the Academy</h2>
-  <section class="space-y-4">
+  <section class="space-y-4 max-w-3xl">
     <p>
       Established in 2009 by Shri Sunil Patil, Surabhi Music Academy pays homage
       to the time-honored tradition of Guru Shishya Parampara (teacher-disciple
@@ -168,36 +176,42 @@
   </section>
 </div>
 
-<div id="classes" class="mt-10 p-4 space-y-8">
-  <h2 class="h1 anchor underline-offset-8">
+<div id="classes" class="pt-10 p-4 border-2 space-y-8">
+<div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');">
+  <!-- Photo by <a href="https://unsplash.com/@saubhagya2304?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saubhagya gandharv</a> on <a href="https://unsplash.com/photos/A76xbfOeR5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+</div>
+  <h2 class="h1 underline-offset-8">
     <a
-      class="anchor"
+      class=""
       href="{base}/classes#classes">Classes</a
     >
     </h2>
-  <div class="pt-4">
+  <p class="">
     Both online and offline classes for Flute and Mouth organ are provided by
-    Surabhi Music Academy. For details visit <a
-      class="anchor px-4"
-      href="{base}/classes#classes">Classes page</a
-    >
-  </div>
-  <div class="my-10 pb-10 space-y-8 mx-auto w-full md:w-[40vw]">
-    <img
-      src="{base}/images/class-harmonica.webp"
-      alt="Harmonica Class"
-      class="mx-auto w-full aspect-square object-cover"
-    />
-    <h3 class="h3">Harmonica Class</h3>
+    Surabhi Music Academy.
+  </p>
+  <div class="flex flex-col md:flex-row justify-around my-10 pb-10">
 
-    <img
-      src="{base}/images/class-zoom-harmonica.jpeg"
-      alt="Harmonica Class"
-      class="mx-auto w-full aspect-square object-cover"
-    />
-    <h3 class="h3">Zoom Class</h3>
+    <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
+      <img
+        src="{base}/images/class-harmonica.webp"
+        alt="Harmonica Class"
+        class=" w-full aspect-square object-cover"
+      />
+      <h3 class="h3">Harmonica Class</h3>
+    </div>
+
+    <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
+      <img
+        src="{base}/images/class-zoom-harmonica.jpeg"
+        alt="Harmonica Class"
+        class=" w-full aspect-square object-cover"
+      />
+      <h3 class="h3">Zoom Class</h3>
+    </div>
 
   </div>
+</div>
 </div>
 
 <style>
