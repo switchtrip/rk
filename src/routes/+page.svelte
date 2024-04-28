@@ -146,7 +146,7 @@
   </div>
 </div>
 
-<div id="about" class="pt-10 p-4 border-2 space-y-8">
+<div id="about" class="pt-10 p-4  space-y-8">
 <div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-left bg-no-repeat bg-cover" style="background-image:url('{base}/media/diya.jpeg');">
 </div>
   <h2 class="h2">About the Academy</h2>
@@ -176,7 +176,7 @@
   </section>
 </div>
 
-<div id="classes" class="pt-10 p-4 border-2 space-y-8">
+<div id="classes" class="pt-10 p-4 space-y-8">
 <div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');">
   <!-- Photo by <a href="https://unsplash.com/@saubhagya2304?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saubhagya gandharv</a> on <a href="https://unsplash.com/photos/A76xbfOeR5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
 </div>
