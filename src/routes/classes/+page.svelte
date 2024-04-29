@@ -63,7 +63,7 @@
           <Accordion>
             <AccordionItem open >
               <svelte:fragment slot="lead">
-                <i class="fa-sharp fa-solid fa-child"></i>
+                <i class="fa-sharp fa-solid fa-child min-w-[2ch]"></i>
               </svelte:fragment>
               <svelte:fragment slot="summary">Beginners</svelte:fragment>
               <svelte:fragment slot="content">
@@ -78,7 +78,7 @@
             </AccordionItem>
             <AccordionItem>
               <svelte:fragment slot="lead">
-                <i class="fa-solid fa-user-tie"></i>
+                <i class="fa-solid fa-user-tie min-w-[2ch]"></i>
               </svelte:fragment>
               <svelte:fragment slot="summary">Intermediate</svelte:fragment>
               <svelte:fragment slot="content">
@@ -93,17 +93,17 @@
 
             <AccordionItem>
               <svelte:fragment slot="lead">
-                <i class="fa-solid fa-hat-cowboy"></i>
+                <i class="fa-solid fa-hat-cowboy min-w-[2ch]"></i>
               </svelte:fragment>
               <svelte:fragment slot="summary">Advanced</svelte:fragment>
               <svelte:fragment slot="content">
                 <ul class="space-y-2">
                     <li>Octave Playing</li>
-                    <li>Double Stop</li>
+                    <li>Chords Playing</li>
                     <li>Rhythm Techniques</li>
+                    <li>Bending and Overbending</li>
                     <li>Playing songs on karaoke tracks etc.</li>
-                    <li>Gamak Techniques (Indian Classical Phenomenon)</li>
-                    <li>Hindustani Classical ragas on Harmonica, with alaap, jod and jhalas</li>
+                    <li>Hindustani Classical ragas on Harmonica</li>
               </svelte:fragment>
             </AccordionItem>
           </Accordion>

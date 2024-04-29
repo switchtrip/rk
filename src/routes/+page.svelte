@@ -6,6 +6,9 @@
   import { onMount } from "svelte";
   import { ChevronDown, FileX, SplitSquareHorizontal } from "lucide-svelte";
 
+  
+
+
   function animate() {
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
@@ -71,6 +74,28 @@
       );
   }
   onMount(() => {
+
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1.0,
+};
+let callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    // Each entry describes an intersection change for one observed
+    // target element:
+    //   entry.boundingClientRect
+    //   entry.intersectionRatio
+    //   entry.intersectionRect
+    //   entry.isIntersecting
+    //   entry.rootBounds
+    //   entry.target
+    //   entry.time
+  });
+};
+let observer = new IntersectionObserver(callback, options);
+console.log(observer);
     animate();
   });
   let studentsEmbedLink = [
@@ -97,8 +122,8 @@
   ];
 </script>
 
-<div class="mai w-full h-screen bg-cover bg-no-repeat bg-center">
-  <div class="bg-gradient-to-b from-black/60 to-black/90 w-full h-full">
+<div class="mai w-full h-[90dvh] bg-cover bg-no-repeat bg-center">
+  <div class="bg-gradient-to-b from-surface-900/20 to-surface-900 w-full h-full">
     <div
       class="pt-96 grid gap-5 items-center justify-items-center overflow-hidden"
     >

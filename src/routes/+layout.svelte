@@ -53,7 +53,7 @@
 </svelte:head>
 
 
-<Drawer class="z-50">
+<Drawer class="">
   <div class="grid grid-rows-[1fr_auto_1fr] h-full">
     <button
       on:click={drawerClose}

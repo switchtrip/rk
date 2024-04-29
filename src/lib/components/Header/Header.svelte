@@ -29,8 +29,9 @@
   function drawerClose() {
     drawerStore.close();
   }
+
   </script>
-<AppBar class="py-2 fixed inset-0" background='bg-black/30'>
+<AppBar class="py-2 fixed top-0 left-0 right-0 backdrop-blur-sm " background='bg-primary-500/5'>
   <svelte:fragment slot="lead">
     <a
       class="lg:!ml-0 lg:w-[82px] w-[60px] overflow-hidden"
