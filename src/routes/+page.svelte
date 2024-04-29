@@ -128,12 +128,11 @@
     </a>
   <h2 class="h2">Performances</h2>
   <p class="max-w-3xl">The academy's annual Harmonica Festival provides students a vibrant platform to showcase their musical prowess. </p>
-  <div class="pt-10 flex flex-col md:flex-row gap-5 flex-wrap justify-center">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
     {#each studentsEmbedLink as student}
-      <div class="min-w-[450px] max-w-[400px]">
+      <div class="w-full aspect-video">
         <iframe
-          class="w-full"
-          height="315"
+          class="w-full h-full"
           src={student.url}
           title="YouTube video player"
           frameborder="0"
