@@ -122,25 +122,25 @@ console.log(observer);
   ];
 </script>
 
-<div class="mai w-full h-[90dvh] bg-cover bg-no-repeat bg-center">
-  <div class="bg-gradient-to-b from-surface-900/20 to-surface-900 w-full h-full">
+<div class="mai w-full h-[100dvh] bg-cover bg-no-repeat bg-center">
+  <div class="bg-gradient-to-b from-surface-900/20 to-surface-900 w-full h-full grid grid-rows-4">
     <div
-      class="pt-96 grid gap-5 items-center justify-items-center overflow-hidden"
+      class="row-start-3 grid grid-rows-2 gap-1 overflow-hidden"
     >
-      <h2 id="learn" class="h2 text-4xl font-thin">Learn</h2>
-      <h1 class="h1 text-6xl min-h-[80px] font-extrabold">
+      <h2 id="learn" class="h2 text-4xl font-thin  self-end">Learn</h2>
+      <h1 class="h1 font-['Prociono'] font-extrabold text-6xl ">
         <span
           class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
         >
         </span>
       </h1>
     </div>
-    <div class="mt-20 flex justify-center">
+    <!-- <div class="mt-20 flex justify-center">
       <a
         class="anchor hover:scale-150 transition duration-100 shadow-xl"
         href="{base}/#students"><ChevronDown size="40" /></a
       >
-    </div>
+    </div> -->
   </div>
 </div>
 
