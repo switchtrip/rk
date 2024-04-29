@@ -53,7 +53,6 @@
 </svelte:head>
 
 
-<!-- Mobile view drawer -->
 <Drawer class="z-50">
   <div class="grid grid-rows-[1fr_auto_1fr] h-full">
     <button
@@ -62,23 +61,15 @@
     >
       <X />
     </button>
-    <!-- Nav Links -->
     <section class="row-start-2 space-y-4 overflow-y-auto">
       <Navigation class="grid [&>li>a]:block [&>li>a]:p-[4vh] [&>li>a]:text-center"/>
     </section>
   </div>
 </Drawer>
 
-<AppShell>
-	<svelte:fragment slot="header">
-    <Header />
-  </svelte:fragment>
-<!-- Page -->
- <!-- <div class="main max-w-7xl p-4 m-auto"> -->
+<Header />
 	<slot />
-<!-- </div> -->
-	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
-</AppShell>
+<Footer />
 
 <style>
 </style>
