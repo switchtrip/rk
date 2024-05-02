@@ -7,10 +7,10 @@
   import { Menu, X } from "lucide-svelte";
   import { Drawer, getDrawerStore } from "@skeletonlabs/skeleton";
   import Navigation from "$lib/navigation/Navigation.svelte";
-
-
+  import { HeaderBg } from "./store";
   const drawerStore = getDrawerStore();
 
+  console.log($HeaderBg);
   // Drawer Handler
   function drawerOpen() {
     const s = {
@@ -22,7 +22,6 @@
       padding: "p-0",
       position: "right",
     };
-    console.log(drawerStore);
     drawerStore.open(s);
   }
 
@@ -31,7 +30,9 @@
   }
 
   </script>
-<AppBar class="py-2 fixed top-0 left-0 right-0 backdrop-blur-sm " background='bg-primary-500/5'>
+
+<AppBar class="py-2 fixed top-0 left-0 right-0  z-40" background=""> 
+<!-- <AppBar class="py-2 top-0 left-0 right-0 backdrop-blur-sm z-40" background="{$HeaderBg}">  -->
   <svelte:fragment slot="lead">
     <a
       class="lg:!ml-0 lg:w-[82px] w-[60px] overflow-hidden"
@@ -43,7 +44,7 @@
     </a>
   </svelte:fragment>
   <svelte:fragment slot="trail">
-    <div class="hidden sm:block">
+    <div class="hidden sm:block backdrop-blur-sm bg-primary-500/40">
       <Navigation class="list-nav flex gap-1" />
     </div>
     <button on:click={drawerOpen} class="btn-icon btn-icon-sm sm:!hidden">

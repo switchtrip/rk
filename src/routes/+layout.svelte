@@ -53,7 +53,7 @@
 </svelte:head>
 
 
-<Drawer class="">
+<Drawer class="z-50">
   <div class="grid grid-rows-[1fr_auto_1fr] h-full">
     <button
       on:click={drawerClose}
@@ -67,9 +67,13 @@
   </div>
 </Drawer>
 
+<!-- <div class="min-h-screen grid grid-rows-[1fr_auto]"> -->
 <Header />
+<!-- <div class="w-full"> -->
 	<slot />
+<!-- </div> -->
 <Footer />
+<!-- </div> -->
 
 <style>
 </style>

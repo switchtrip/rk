@@ -4,11 +4,9 @@
   import { gsap } from "gsap";
   import { TextPlugin } from "gsap/dist/TextPlugin";
   import { onMount } from "svelte";
-  import { ChevronDown, FileX, SplitSquareHorizontal } from "lucide-svelte";
-
-  
-
-
+  import { HeaderBg } from "$lib/components/Header/store.js";
+  import { ChevronDown } from "lucide-svelte";
+  import { siWindowsterminal } from "simple-icons";
   function animate() {
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
@@ -16,7 +14,7 @@
     const tl = gsap.timeline(st);
 
     tl.to(
-      "h1 span",
+      "#harmonica",
       {
         text: "Flute",
         duration: 1,
@@ -35,9 +33,9 @@
         "start"
       )
       .to(
-        "h1 span",
+        "#harmonica",
         {
-          text: "Harmonica",
+          text: "Mouth Organ",
           duration: 1,
           repeat: 1,
           repeatDelay: 1,
@@ -54,9 +52,9 @@
         "hi"
       )
       .to(
-        "h1 span",
+        "#harmonica",
         {
-          text: "Classical",
+          text: "Hindustani Classical",
           duration: 1,
           repeat: 1,
           repeatDelay: 1,
@@ -73,29 +71,8 @@
         "perform"
       );
   }
+  let anim;
   onMount(() => {
-
-let options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 1.0,
-};
-let callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-    // Each entry describes an intersection change for one observed
-    // target element:
-    //   entry.boundingClientRect
-    //   entry.intersectionRatio
-    //   entry.intersectionRect
-    //   entry.isIntersecting
-    //   entry.rootBounds
-    //   entry.target
-    //   entry.time
-  });
-};
-let observer = new IntersectionObserver(callback, options);
-console.log(observer);
     animate();
   });
   let studentsEmbedLink = [
@@ -122,121 +99,133 @@ console.log(observer);
   ];
 </script>
 
-<div class="mai w-full h-[100dvh] bg-cover bg-no-repeat bg-center">
-  <div class="bg-gradient-to-b from-surface-900/20 to-surface-900 w-full h-full grid grid-rows-4">
+<div
+  bind:this={anim}
+  class="mai w-full h-[86dvh] bg-cover bg-no-repeat bg-center"
+>
+  <div
+    class="bg-gradient-to-b from-surface-900/20 to-surface-900 w-full h-full grid grid-rows-4"
+  >
     <div
-      class="row-start-3 grid grid-rows-2 gap-1 overflow-hidden"
+      class="row-start-3 row-end-5 grid grid-rows-[1fr_4fr] gap-1 overflow-hidden px-5 md:w-[600px] md:mx-auto lg:w-[900px] lg:mx-auto"
     >
-      <h2 id="learn" class="h2 text-4xl font-thin  self-end">Learn</h2>
-      <h1 class="h1 font-['Prociono'] font-extrabold text-6xl ">
-        <span
-          class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
-        >
-        </span>
-      </h1>
+      <h2 id="learn" class="h2 text-4xl font-thin self-end">Learn</h2>
+      <h1
+        id="harmonica"
+        class="h1 font-thin text-6xl
+          bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
+      ></h1>
+      <div class="mt-20 flex justify-center">
+        <button class="btn" on:click={()=>window.scroll({
+          top: 800,
+          left: 0,
+          behavior: "smooth",
+        })} >
+            <ChevronDown size="40" />
+        </button>
+      </div>
     </div>
-    <!-- <div class="mt-20 flex justify-center">
-      <a
-        class="anchor hover:scale-150 transition duration-100 shadow-xl"
-        href="{base}/#students"><ChevronDown size="40" /></a
-      >
-    </div> -->
   </div>
 </div>
 
 <div class="pt-10 p-4 sm:p-8 md:p-12 space-y-20 max-w-7xl mx-auto">
-<div id="students" class="mt-10 p-4 space-y-4">
+  <div id="students" class="mt-10 p-4 space-y-4">
     <a href="{base}/gallery/">
-    
-  <div  class="btn w-20 h-20 rounded-full border-2 border-white bg-left bg-no-repeat bg-cover" style="background-image:url('{base}/media/mic.jpeg');">
-  </div>
+      <div
+        class="btn w-20 h-20 rounded-full border-2 border-white bg-left bg-no-repeat bg-cover"
+        style="background-image:url('{base}/media/mic.jpeg');"
+      ></div>
     </a>
-  <h2 class="h2">Performances</h2>
-  <p class="max-w-3xl">The academy's annual Harmonica Festival provides students a vibrant platform to showcase their musical prowess. </p>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-    {#each studentsEmbedLink as student}
-      <div class="w-full aspect-video">
-        <iframe
-          class="w-full h-full"
-          src={student.url}
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    {/each}
+    <h2 class="h2">Performances</h2>
+    <p class="max-w-3xl">
+      The academy's annual Harmonica Festival provides students a vibrant
+      platform to showcase their musical prowess.
+    </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {#each studentsEmbedLink as student}
+        <div class="w-full aspect-video">
+          <iframe
+            class="w-full h-full"
+            src={student.url}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      {/each}
+    </div>
   </div>
-</div>
 
-<div id="about" class="pt-10 p-4  space-y-8">
-<div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-left bg-no-repeat bg-cover" style="background-image:url('{base}/media/diya.jpeg');">
-</div>
-  <h2 class="h2">About the Academy</h2>
-  <section class="space-y-4 max-w-3xl">
-    <p>
-      Established in 2009 by Shri Sunil Patil, Surabhi Music Academy pays homage
-      to the time-honored tradition of Guru Shishya Parampara (teacher-disciple
-      relationship). Sunil Patil, a disciple of Pt.Shri Vivek Sonar from the
-      Maihar Gharana ( a senior disciple of Pt. Hariprasad Chaurasia),
-      exemplifies virtuosity in both the mouth organ and flute, dedicating his
-      life to music, teaching, and the advancement of the Mouth Organ. He has
-      foundation in Hindustani Classical Music since childhood.
-    </p>
-    <p>
-      His passion for the instrument gave rise to the annual Harmonica Festival,
-      a platform showcasing the world's finest mouth organ talents. Not only
-      does this event promote the instrument nationally, but it also offers
-      students the opportunity to display their skills in front of a vast
-      audience alongside seasoned masters.
-    </p>
-    <p>
-      His fervent dedication to disseminating music for the betterment of
-      society has led to the cultivation of a substantial following of disciples
-      in both Harmonica and Flute. He offers training in both instruments
-      through both offline and online modalities.
-    </p>
-  </section>
-</div>
+  <div id="about" class="pt-10 p-4 space-y-8">
+    <div
+      class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-left bg-no-repeat bg-cover"
+      style="background-image:url('{base}/media/diya.jpeg');"
+    ></div>
+    <h2 class="h2">About the Academy</h2>
+    <section class="space-y-4 max-w-3xl">
+      <p>
+        Established in 2009 by Shri Sunil Patil, Surabhi Music Academy pays
+        homage to the time-honored tradition of Guru Shishya Parampara
+        (teacher-disciple relationship). Sunil Patil, a disciple of Pt.Shri
+        Vivek Sonar from the Maihar Gharana ( a senior disciple of Pt.
+        Hariprasad Chaurasia), exemplifies virtuosity in both the mouth organ
+        and flute, dedicating his life to music, teaching, and the advancement
+        of the Mouth Organ. He has foundation in Hindustani Classical Music
+        since childhood.
+      </p>
+      <p>
+        His passion for the instrument gave rise to the annual Harmonica
+        Festival, a platform showcasing the world's finest mouth organ talents.
+        Not only does this event promote the instrument nationally, but it also
+        offers students the opportunity to display their skills in front of a
+        vast audience alongside seasoned masters.
+      </p>
+      <p>
+        His fervent dedication to disseminating music for the betterment of
+        society has led to the cultivation of a substantial following of
+        disciples in both Harmonica and Flute. He offers training in both
+        instruments through both offline and online modalities.
+      </p>
+    </section>
+  </div>
 
-<div id="classes" class="pt-10 p-4 space-y-8">
-<!-- <div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');"> -->
-<div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-center bg-no-repeat bg-cover" style="background-image:url('{base}/media/classes.jpeg');">
-  <!-- Photo by <a href="https://unsplash.com/@saubhagya2304?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saubhagya gandharv</a> on <a href="https://unsplash.com/photos/A76xbfOeR5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
-</div>
-  <h2 class="h1 underline-offset-8">
-    <a
-      class=""
-      href="{base}/classes#classes">Classes</a
+  <div id="classes" class="pt-10 p-4 space-y-8">
+    <!-- <div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');"> -->
+    <div
+      class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-center bg-no-repeat bg-cover"
+      style="background-image:url('{base}/media/classes.jpeg');"
     >
+      <!-- Photo by <a href="https://unsplash.com/@saubhagya2304?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saubhagya gandharv</a> on <a href="https://unsplash.com/photos/A76xbfOeR5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+    </div>
+    <h2 class="h1 underline-offset-8">
+      <a class="" href="{base}/classes#classes">Classes</a>
     </h2>
-  <p class="">
-    Both online and offline classes for Flute and Mouth organ are provided by
-    Surabhi Music Academy.
-  </p>
-  <div class="flex flex-col md:flex-row justify-around my-10 pb-10">
+    <p class="">
+      Both online and offline classes for Flute and Mouth organ are provided by
+      Surabhi Music Academy.
+    </p>
+    <div class="flex flex-col md:flex-row justify-around my-10 pb-10">
+      <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
+        <img
+          src="{base}/images/class-harmonica.webp"
+          alt="Harmonica Class"
+          class=" w-full aspect-square object-cover"
+        />
+        <h3 class="h3">Harmonica Class</h3>
+      </div>
 
-    <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
-      <img
-        src="{base}/images/class-harmonica.webp"
-        alt="Harmonica Class"
-        class=" w-full aspect-square object-cover"
-      />
-      <h3 class="h3">Harmonica Class</h3>
+      <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
+        <img
+          src="{base}/images/class-zoom-harmonica.jpeg"
+          alt="Harmonica Class"
+          class=" w-full aspect-square object-cover"
+        />
+        <h3 class="h3">Zoom Class</h3>
+      </div>
     </div>
-
-    <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
-      <img
-        src="{base}/images/class-zoom-harmonica.jpeg"
-        alt="Harmonica Class"
-        class=" w-full aspect-square object-cover"
-      />
-      <h3 class="h3">Zoom Class</h3>
-    </div>
-
   </div>
-</div>
 </div>
 
 <style>

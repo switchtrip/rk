@@ -6,7 +6,7 @@
   rel="noreferrer"
 >
     <span class="font-black">Surabhi Music Academy</span>
-B/B-2, Katepuram Society (Phase 1)
+B/B-2, Katepuram Society (Phase 1) 
 New Sangvi, Pimple Gurav,
 Pune, Maharashtra-411061
 </a>
