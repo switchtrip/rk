@@ -13,60 +13,27 @@
     const st = { repeat: -1, repeatDelay: 1 };
     const tl = gsap.timeline(st);
 
-    tl.to(
-      "#harmonica",
-      {
-        text: "Flute",
-        duration: 1,
-        repeat: 1,
-        repeatDelay: 1,
-        yoyo: true,
-      },
-      "start"
-    )
-      .to(
-        ".mai",
-        {
-          backgroundImage: `url(${base}/images/sir_ph.jpeg)`,
-          duration: 1,
-        },
-        "start"
-      )
-      .to(
-        "#harmonica",
-        {
-          text: "Mouth Organ",
-          duration: 1,
-          repeat: 1,
-          repeatDelay: 1,
-          yoyo: true,
-        },
-        "hi"
-      )
-      .to(
+      tl.to(
         ".mai",
         {
           backgroundImage: `url(${base}/images/sir_sitting_MO.png)`,
-          duration: 1,
+          duration: 2,
         },
-        "hi"
-      )
-      .to(
-        "#harmonica",
-        {
-          text: "Hindustani Classical",
-          duration: 1,
-          repeat: 1,
-          repeatDelay: 1,
-          yoyo: true,
-        },
-        "perform"
+        "start"
       )
       .to(
         ".mai",
         {
           backgroundImage: `url(${base}/images/sir_harmonica_flute_students.jpeg)`,
-          duration: 1,
+          duration: 2,
+        },
+        "hi"
+      )
+      .to(
+        ".mai",
+        {
+          backgroundImage: `url(${base}/images/sir_ph.jpeg)`,
+          duration: 2,
         },
         "perform"
       );
@@ -99,14 +66,35 @@
   ];
 </script>
 
-<div
-  bind:this={anim}
-  class="mai w-full h-[86dvh] bg-cover bg-no-repeat bg-center"
->
+<div bind:this={anim} class="">
   <div
-    class="bg-gradient-to-b from-surface-900/20 to-surface-900 w-full h-full grid grid-rows-4"
+    class="hero h-[96dvh] "
   >
-    <div
+    <section
+      class="mai bg-cover bg-no-repeat bg-center "
+    >
+    <div class="bg-gradient-to-b from-white/0  to-white dark:from-surface-900/5 dark:to-surface-900 w-full h-full"></div>
+  </section>
+    <section
+      class="hero-text  md:col-start-1 md:row-start-auto backdrop-blur-md flex items-center justify-center"
+    >
+      <div
+        class=" border-2 border-white border-none max-w-96 p-4 flex flex-col gap-8 items-center"
+      >
+        <p class="text-sm space-x-3">
+          <span>Mouth Organ </span>
+          <span>Flute </span>
+          <span>Classical </span>
+        </p>
+        <h1 class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none">
+          Surabhi
+        </h1>
+        <h4 class="text-lg text-[#691f18]/80 dark:text-[#edaa40]/40  -mt-8 leading-3">Music Academy</h4>
+        <img class="" src="{base}/images/seprator_flute.png" alt="Flute" />
+        <h2 class=" h2 font-medium dark:font-thin text-primary-700-200-token -mt-5">Shri Sunil Patil</h2>
+      </div>
+    </section>
+    <!-- <div
       class="row-start-3 row-end-5 grid grid-rows-[1fr_4fr] gap-1 overflow-hidden px-5 md:w-[600px] md:mx-auto lg:w-[900px] lg:mx-auto"
     >
       <h2 id="learn" class="h2 text-4xl font-thin self-end">Learn</h2>
@@ -124,7 +112,7 @@
             <ChevronDown size="40" />
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -229,7 +217,16 @@
 </div>
 
 <style>
+  .hero{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr;
+  }
   .mai {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 1;
     /* background-image: url(images/sir_ph.jpeg); */
     /* background-image: url(images/sir_anand_sam.jpeg); */
     /* background-image: url(images/sir_E_base.jpg); */
@@ -237,5 +234,14 @@
     /* background-image: url(images/fulte_samjawaan.jpeg); */
     /* static/images/fulte_samjawaan.jpeg */
     -webkit-overflow-scrolling: touch;
+  }
+  .hero-text{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .grad{
+    background: linear-gradient(180deg, rgba(242,202,181,0) 31%, rgba(164,110,18,0.7) 68%, rgba(242,50,10,1) 100%); 
   }
 </style>
