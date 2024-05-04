@@ -1,5 +1,5 @@
 <script>
-    /** @type {import('./$types').PageData} */
+    /** @type {import('../../../routes/gallery/$types').PageData} */
   import { base } from "$app/paths";
   import {ChevronLeft, ChevronRight} from "lucide-svelte";
   let el;
