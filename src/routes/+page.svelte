@@ -7,20 +7,26 @@
   import { HeaderBg } from "$lib/components/Header/store.js";
   import { ChevronDown } from "lucide-svelte";
   import { siWindowsterminal } from "simple-icons";
+  import Mycarousel from "$lib/components/Carousel/Mycarousel.svelte";
+
+  const img_list = [
+    "images/sir_harmonica_flute_students.jpeg",
+    "images/flute_samjh.jpg",
+  ];
   function animate() {
     gsap.registerPlugin(TextPlugin);
     gsap.defaults({ ease: "none" });
     const st = { repeat: -1, repeatDelay: 1 };
     const tl = gsap.timeline(st);
 
-      tl.to(
-        ".mai",
-        {
-          backgroundImage: `url(${base}/images/sir_sitting_MO.png)`,
-          duration: 2,
-        },
-        "start"
-      )
+    tl.to(
+      ".mai",
+      {
+        backgroundImage: `url(${base}/images/sir_sitting_MO.png)`,
+        duration: 2,
+      },
+      "start"
+    )
       .to(
         ".mai",
         {
@@ -41,7 +47,7 @@
   }
   let anim;
   onMount(() => {
-    animate();
+    // animate();
   });
   let studentsEmbedLink = [
     {
@@ -68,31 +74,41 @@
 </script>
 
 <div bind:this={anim} class="">
-  <div
-    class="hero h-[96dvh] "
-  >
+  <div class="hero h-[96dvh]">
     <section
       class="mai bg-cover bg-no-repeat bg-center "
+      style="background-image: url({img_list[0]});"
     >
-    <div class="bg-gradient-to-b from-surface-900/5 to-surface-900 w-full h-full"></div>
+    <div class="bg-gradient-to-b lg:bg-none from-surface-900/5 to-surface-900 w-full h-full"></div>
   </section>
+    
     <section
-      class="hero-text  md:col-start-1 md:row-start-auto backdrop-blur-lg flex items-center justify-center"
+      class="hero-text backdrop-blur-lg flex items-center justify-center "
     >
       <div
-        class=" border-2 border-white border-none max-w-96 p-4 flex flex-col gap-8 items-center"
+        class="    p-4 flex flex-col gap-8 items-center"
       >
         <p class="text-sm space-x-3">
           <span>Mouth Organ </span>
           <span>Flute </span>
           <span>Classical </span>
         </p>
-        <h1 class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none">
+        <h1
+          class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none"
+        >
           Surabhi
         </h1>
-        <h4 class="text-lg text-[#691f18]/80 dark:text-[#edaa40]/40  -mt-8 leading-3">Music Academy</h4>
+        <h4
+          class="text-lg text-[#691f18]/80 dark:text-[#edaa40]/40 -mt-8 leading-3"
+        >
+          Music Academy
+        </h4>
         <img class="" src="{base}/images/seprator_flute.png" alt="Flute" />
-        <h2 class=" h2 font-medium dark:font-thin text-primary-700-200-token -mt-5">Shri Sunil Patil</h2>
+        <h2
+          class=" h2 font-medium dark:font-thin text-primary-700-200-token -mt-5"
+        >
+          Shri Sunil Patil
+        </h2>
       </div>
     </section>
     <!-- <div
@@ -218,7 +234,7 @@
 </div>
 
 <style>
-  .hero{
+  .hero {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
@@ -236,14 +252,38 @@
     /* static/images/fulte_samjawaan.jpeg */
     -webkit-overflow-scrolling: touch;
   }
-  .hero-text{
+  .hero-text {
     grid-row-start: 4;
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 1;
   }
-  .grad{
-    background: linear-gradient(180deg, rgba(242,202,181,0) 31%, rgba(164,110,18,0.7) 68%, rgba(242,50,10,1) 100%); 
+  .grad {
+    background: linear-gradient(
+      180deg,
+      rgba(242, 202, 181, 0) 31%,
+      rgba(164, 110, 18, 0.7) 68%,
+      rgba(242, 50, 10, 1) 100%
+    );
   }
-  @media(min-width:800px){}
+  @media (min-width: 800px) {
+    .hero{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+
+    }
+    .mai {
+      grid-row-start: 1;
+      grid-row-end: 1;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    .hero-text {
+      grid-row-start: 1;
+      grid-row-end: 1;
+      grid-column-start: 4;
+      grid-column-end: 6;
+    }
+  }
 </style>
