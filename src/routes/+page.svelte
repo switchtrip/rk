@@ -10,6 +10,7 @@
   import Mycarousel from "$lib/components/Carousel/Mycarousel.svelte";
 
   const img_list = [
+    "images/sir_sitting_MO.png",
     "images/sir_harmonica_flute_students.jpeg",
     "images/flute_samjh.jpg",
   ];
@@ -75,19 +76,37 @@
 
 <div bind:this={anim} class="">
   <div class="hero h-[96dvh]">
-    <section
+    <!-- <section
       class="mai bg-cover bg-no-repeat bg-center "
       style="background-image: url({img_list[0]});"
     >
     <div class="bg-gradient-to-b lg:bg-none from-surface-900/5 to-surface-900 w-full h-full"></div>
-  </section>
-    
+  </section> -->
     <section
-      class="hero-text backdrop-blur-lg flex items-center justify-center "
+      class="mai snap-x snap-mandatory scroll-smooth flex overflow-x-auto bg-gradient-to-b from-surface-900/30 to-surface-900"
     >
-      <div
-        class="    p-4 flex flex-col gap-8 items-center"
-      >
+      {#each img_list as img_url}
+        <img
+          src={img_url}
+          alt={img_url}
+          class="mask snap-end h-full w-full object-cover block rounded-sm"
+        />
+
+        <!-- <section
+          class="bg-cover bg-no-repeat bg-center w-full h-full"
+          style="background-image: url({img_url});"
+        >
+          <div
+            class="bg-gradient-to-b lg:bg-none from-surface-900/5 to-surface-900 w-full h-full"
+          ></div>
+        </section> -->
+      {/each}
+    </section>
+
+    <section
+      class="hero-text backdrop-blur-lg flex items-center justify-center"
+    >
+      <div class="    p-4 flex flex-col gap-8 items-center">
         <p class="text-sm space-x-3">
           <span>Mouth Organ </span>
           <span>Flute </span>
@@ -258,20 +277,22 @@
     grid-column-start: 1;
     grid-column-end: 1;
   }
-  .grad {
-    background: linear-gradient(
-      180deg,
-      rgba(242, 202, 181, 0) 31%,
-      rgba(164, 110, 18, 0.7) 68%,
+  .mask {
+    mask-image: linear-gradient(
+      0deg,
+      rgba(242, 202, 181, 0) 10%,
+      rgba(164, 110, 18, 0.9) 68%,
       rgba(242, 50, 10, 1) 100%
     );
   }
   @media (min-width: 800px) {
-    .hero{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-
+    .mask{
+      mask-image: none;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 1fr;
     }
     .mai {
       grid-row-start: 1;
