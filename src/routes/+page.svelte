@@ -32,7 +32,8 @@
       .to(
         ".mai",
         {
-          backgroundImage: `url(${base}/images/sir_ph.jpeg)`,
+          // backgroundImage: `url(${base}/images/sir_ph.jpeg)`,
+          backgroundImage: `url(${base}/images/flute_samjh.jpg`,
           duration: 2,
         },
         "perform"
@@ -73,10 +74,10 @@
     <section
       class="mai bg-cover bg-no-repeat bg-center "
     >
-    <div class="bg-gradient-to-b from-white/0  to-white dark:from-surface-900/5 dark:to-surface-900 w-full h-full"></div>
+    <div class="bg-gradient-to-b from-surface-900/5 to-surface-900 w-full h-full"></div>
   </section>
     <section
-      class="hero-text  md:col-start-1 md:row-start-auto backdrop-blur-md flex items-center justify-center"
+      class="hero-text  md:col-start-1 md:row-start-auto backdrop-blur-lg flex items-center justify-center"
     >
       <div
         class=" border-2 border-white border-none max-w-96 p-4 flex flex-col gap-8 items-center"
@@ -244,4 +245,5 @@
   .grad{
     background: linear-gradient(180deg, rgba(242,202,181,0) 31%, rgba(164,110,18,0.7) 68%, rgba(242,50,10,1) 100%); 
   }
+  @media(min-width:800px){}
 </style>
