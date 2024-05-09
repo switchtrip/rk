@@ -14,38 +14,6 @@
     "images/sir_harmonica_flute_students.jpeg",
     "images/flute_samjh.jpg",
   ];
-  function animate() {
-    gsap.registerPlugin(TextPlugin);
-    gsap.defaults({ ease: "none" });
-    const st = { repeat: -1, repeatDelay: 1 };
-    const tl = gsap.timeline(st);
-
-    tl.to(
-      ".mai",
-      {
-        backgroundImage: `url(${base}/images/sir_sitting_MO.png)`,
-        duration: 2,
-      },
-      "start"
-    )
-      .to(
-        ".mai",
-        {
-          backgroundImage: `url(${base}/images/sir_harmonica_flute_students.jpeg)`,
-          duration: 2,
-        },
-        "hi"
-      )
-      .to(
-        ".mai",
-        {
-          // backgroundImage: `url(${base}/images/sir_ph.jpeg)`,
-          backgroundImage: `url(${base}/images/flute_samjh.jpg`,
-          duration: 2,
-        },
-        "perform"
-      );
-  }
   let anim;
   onMount(() => {
     // animate();
@@ -106,12 +74,12 @@
     <section
       class="hero-text backdrop-blur-lg flex items-center justify-center"
     >
-      <div class="    p-4 flex flex-col gap-8 items-center">
-        <p class="text-sm space-x-3">
+      <div class="p-4 flex flex-col gap-8 items-center">
+        <h2 class="text-sm space-x-3">
           <span>Mouth Organ </span>
           <span>Flute </span>
           <span>Classical </span>
-        </p>
+        </h2>
         <h1
           class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none"
         >

@@ -12,14 +12,14 @@
   <h1 class="h1">Gallery</h1>
 </div>
 {#each data.gallery as event}
-  <div class="space-y-4 my-10">
+  <div class="card space-y-4">
+<h2 class="h4 card-header">
     <a
-      class="btn anchor underline-offset-8"
       id={event.eventName}
       href="{$page.url.pathname}/{event.eventName}"
     >
-      <h2 class="h2">{event.eventName}</h2>
-    </a>
+      {event.eventName}
+    </a></h2>
     <Mycarousel>
       {#each event.images as image}
         <div
