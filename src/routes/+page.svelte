@@ -8,16 +8,10 @@
   import { ChevronDown } from "lucide-svelte";
   import { siWindowsterminal } from "simple-icons";
   import Mycarousel from "$lib/components/Carousel/Mycarousel.svelte";
+	import { fade, fly, scale } from 'svelte/transition'
+  import { quintOut } from 'svelte/easing';
 
-  const img_list = [
-    "images/sir_sitting_MO.png",
-    "images/sir_harmonica_flute_students.jpeg",
-    "images/flute_samjh.jpg",
-  ];
-  let anim;
-  onMount(() => {
-    // animate();
-  });
+
   let studentsEmbedLink = [
     {
       student: "All",
@@ -40,6 +34,19 @@
       url: "https://www.youtube.com/embed/3GAAGCM3QX8?si=bxJqybr4j1pmvxzc",
     },
   ];
+
+  let anim;
+  onMount(() => {
+    setInterval(next, 5000);
+  });
+
+  const img_list = [
+    "images/sir_sitting_MO.png",
+    "images/sir_harmonica_flute_students.jpeg",
+    "images/flute_samjh.jpg",
+  ];
+let carouselIndex = 0;
+const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
 </script>
 
 <div bind:this={anim} class="">
@@ -50,30 +57,23 @@
     >
     <div class="bg-gradient-to-b lg:bg-none from-surface-900/5 to-surface-900 w-full h-full"></div>
   </section> -->
-    <section
-      class="mai snap-x snap-mandatory scroll-smooth flex overflow-x-auto bg-gradient-to-b from-surface-900/30 to-surface-900"
+    <section 
+      class="mai overflow-hidden h-full w-full bg-gradient-to-b from-surface-900/30 to-surface-900"
     >
-      {#each img_list as img_url}
-        <img
-          src={img_url}
-          alt={img_url}
-          class="mask snap-end h-full w-full object-cover block rounded-sm"
-        />
+    {#each [img_list[carouselIndex]] as photo (carouselIndex)}
+      <!-- {#if index==carouselIndex} -->
+        <img  
+        in:fade={{duration:900}}
+        class="mask h-full object-cover" src={photo} alt="Performances of Shri Sunil Patil, solo as well as with their students">
+      <!-- {/if}  -->
+    {/each}  
 
-        <!-- <section
-          class="bg-cover bg-no-repeat bg-center w-full h-full"
-          style="background-image: url({img_url});"
-        >
-          <div
-            class="bg-gradient-to-b lg:bg-none from-surface-900/5 to-surface-900 w-full h-full"
-          ></div>
-        </section> -->
-      {/each}
-    </section>
+  </section>
 
     <section
       class="hero-text backdrop-blur-lg flex items-center justify-center"
     >
+    <!-- <button on:click={next}>Click</button> -->
       <div class="p-4 flex flex-col gap-8 items-center">
         <h2 class="text-sm space-x-3">
           <span>Mouth Organ </span>

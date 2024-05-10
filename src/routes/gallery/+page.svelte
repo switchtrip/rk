@@ -1,17 +1,18 @@
 <script>
   /** @type {import('./$types').PageData} */
-  export let data;
+  // export let data;
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-
   import Mycarousel from "$lib/components/Carousel/Mycarousel.svelte";
+
+import galleryList from '$lib/data/gallery.json';
 </script>
 
 <div class="pt-10 p-4 sm:p-8 md:p-12 space-y-10 max-w-7xl mx-auto">
 <div class="pt-10 p-4">
   <h1 class="h1">Gallery</h1>
 </div>
-{#each data.gallery as event}
+{#each galleryList as event}
   <div class="card space-y-4">
 <h2 class="h4 card-header">
     <a
