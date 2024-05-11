@@ -9,11 +9,14 @@
   } from "@skeletonlabs/skeleton";
 
   import ClassStructure from "./ClassStructure.svelte";
+  import { onMount } from "svelte";
   const classes = [];
   let tabSet = 0;
+  onMount(() => {
   if ($page.url.searchParams.get("type") == "flute"){
      tabSet = 1;
   }
+})
 
   const classInfo = [
     {
