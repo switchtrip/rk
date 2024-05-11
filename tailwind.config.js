@@ -17,7 +17,7 @@ const config = {
   plugins: [
     skeleton({
       themes: {
-        preset: ["modern", "gold-nouveau", "skeleton", "wintry"],
+        preset: ["modern", "gold-nouveau", "skeleton", "wintry", "crimson"],
         custom: [os],
       },
     }),

@@ -2,14 +2,18 @@
   /** @type {import('./$types').PageData} */
   //   export let data;
   import { base } from "$app/paths";
+  import {page} from "$app/stores";
   import {
-    Accordion,
-    AccordionItem,
     Tab,
     TabGroup,
   } from "@skeletonlabs/skeleton";
+
+  import ClassStructure from "./ClassStructure.svelte";
   const classes = [];
   let tabSet = 0;
+  if ($page.url.searchParams.get("type") == "flute"){
+     tabSet = 1;
+  }
 
   const classInfo = [
     {
@@ -115,7 +119,6 @@
       Both offline and online classes are available for flute and mouth organ
     </p>
   </div>
-
   <TabGroup class="p-4">
     <Tab bind:group={tabSet} name="Harmonica" value={0}>
       <svelte:fragment slot="lead"></svelte:fragment>
@@ -125,100 +128,11 @@
       <svelte:fragment slot="lead"></svelte:fragment>
       <span>Flute</span>
     </Tab>
-    <!-- Tab Panels --->
     <svelte:fragment slot="panel">
       {#if tabSet === 0}
-          <div class="space-y-4">
-            <p class="">
-              {classInfo[0]["description"]}
-            </p>
-            <Accordion>
-              {#each classInfo[0]["classes"] as classes, index}
-                <AccordionItem open={index==0?true:false}>
-                  <svelte:fragment slot="lead">
-                    {#if classes.title == 'Beginners'}
-                      <i class="fa-sharp fa-solid fa-child min-w-[2ch]"></i>
-                    {:else if classes.title == 'Intermediate'}
-                    <i class="fa-solid fa-user-tie min-w-[2ch]"></i>
-                    {:else}
-                    <i class="fa-solid fa-hat-cowboy min-w-[2ch]"></i>
-                    {/if}
-                  </svelte:fragment>
-                  <svelte:fragment slot="summary"
-                    >{classes.title}</svelte:fragment
-                  >
-                  <svelte:fragment slot="content">
-                    <ul class="space-y-2 list-disc text-surface-600-300-token">
-                      {#each classes.lessons as lesson}
-                        <li>{lesson}</li>
-                      {/each}
-                    </ul>
-                    <hr />
-                  </svelte:fragment>
-                </AccordionItem>
-              {/each}
-            </Accordion>
-
-            <div class="md:flex md:gap-3">
-              {#each classInfo[0]["images"] as cl}
-                <div class="my-10 pb-10 space-y-4 mx-auto w-full md:w-[40vw]">
-                  <img
-                    src={cl.url}
-                    alt={cl.title}
-                    class="mx-auto w-full aspect-square object-cover"
-                  />
-                  <h3 class="h3">{cl.title}</h3>
-                  <p class="text-sm">{cl.timings}</p>
-                </div>
-              {/each}
-            </div>
-          </div>
+      <ClassStructure classDetails={classInfo[0]}></ClassStructure>
       {:else if tabSet === 1}
-          <div class="space-y-4">
-            <p class="">
-              {classInfo[1]["description"]}
-            </p>
-            <Accordion>
-              {#each classInfo[1]["classes"] as classes, index}
-                <AccordionItem open={index==0?true:false}>
-                  <svelte:fragment slot="lead">
-                    {#if classes.title == 'Beginners'}
-                      <i class="fa-sharp fa-solid fa-child min-w-[2ch]"></i>
-                    {:else if classes.title == 'Intermediate'}
-                    <i class="fa-solid fa-user-tie min-w-[2ch]"></i>
-                    {:else}
-                    <i class="fa-solid fa-hat-cowboy min-w-[2ch]"></i>
-                    {/if}
-                  </svelte:fragment>
-                  <svelte:fragment slot="summary"
-                    >{classes.title}</svelte:fragment
-                  >
-                  <svelte:fragment slot="content">
-                    <ul class="space-y-2 list-disc text-surface-600-300-token">
-                      {#each classes.lessons as lesson}
-                        <li>{lesson}</li>
-                      {/each}
-                    </ul>
-                    <hr />
-                  </svelte:fragment>
-                </AccordionItem>
-              {/each}
-            </Accordion>
-
-            <div class="md:flex md:gap-3">
-              {#each classInfo[1]["images"] as cl}
-                <div class="my-10 pb-10 space-y-4 mx-auto w-full md:w-[40vw]">
-                  <img
-                    src={cl.url}
-                    alt={cl.title}
-                    class="mx-auto w-full aspect-square object-cover"
-                  />
-                  <h3 class="h3">{cl.title}</h3>
-                  <p class="text-sm">{cl.timings}</p>
-                </div>
-              {/each}
-            </div>
-          </div>
+      <ClassStructure classDetails={classInfo[1]}></ClassStructure>
       {/if}
     </svelte:fragment>
   </TabGroup>

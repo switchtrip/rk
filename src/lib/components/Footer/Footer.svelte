@@ -5,7 +5,7 @@
   import Navigation from "$lib/navigation/Navigation.svelte";
   import { Phone } from "lucide-svelte";
   import Address from "$lib/components/Footer/Address.svelte";
-
+  import social from '$lib/data/social.json';
   // Base Classes
   const cBase =
     "bg-surface-50 dark:bg-surface-900 border-t border-surface-500/10 text-xs md:text-base";
@@ -16,28 +16,6 @@
     "flex flex-col md:flex-row justify-between items-center md:items-start space-y-4 md:space-y-0";
 
   // Social Icons
-  const socialLinks = [
-    {
-      title: "Instagram",
-      href: "https://www.instagram.com/sunilpatilpune",
-      icon: "fa-instagram",
-    },
-    {
-      title: "Facebook",
-      href: "https://www.facebook.com/people/Surabhi-Music-Academy/100063698980654/",
-      icon: "fa-facebook",
-    },
-    {
-      title: "YouTube Academy",
-      href: "https://www.youtube.com/@surabhimusic6581",
-      icon: "fa-youtube",
-    },
-    {
-      title: "YouTube Sunil Patil",
-      href: "https://www.youtube.com/@surabhimusic",
-      icon: "fa-youtube",
-    },
-  ];
 </script>
 
 <div class="page-footer {cBase}">
@@ -63,7 +41,7 @@
     <!-- Row 2 -->
     <section class={cRowTwo}>
       <div class="flex gap-6">
-        {#each socialLinks as sl}
+        {#each Object.entries(social) as [keys, sl]}
           <a
             class="opacity-75 hover:opacity-100"
             href={sl.href}

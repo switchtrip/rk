@@ -11,6 +11,7 @@
   // import Footer from "$lib/components/Footer.svelte";
   import Footer from "$lib/components/Footer/Footer.svelte";
   import Header from "$lib/components/Header/Header.svelte";
+  import { onMount } from "svelte";
 
   initializeStores();
 
@@ -33,6 +34,9 @@
   function drawerClose() {
     drawerStore.close();
   }
+
+  onMount(()=>{
+  });
 </script>
 
 <svelte:head>
@@ -67,13 +71,9 @@
   </div>
 </Drawer>
 
-<!-- <div class="min-h-screen grid grid-rows-[1fr_auto]"> -->
 <Header />
-<!-- <div class="w-full"> -->
 	<slot />
-<!-- </div> -->
 <Footer />
-<!-- </div> -->
 
 <style>
 </style>

@@ -37,7 +37,11 @@
 
   let anim;
   onMount(() => {
-    setInterval(next, 5000);
+    let intID = setInterval(next, 3000);
+    setTimeout(clearCarousel, 3000 * 12);
+    function clearCarousel(){
+      clearInterval(intID);
+    }
   });
 
   const img_list = [
@@ -50,13 +54,7 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
 </script>
 
 <div bind:this={anim} class="">
-  <div class="hero h-[96dvh]">
-    <!-- <section
-      class="mai bg-cover bg-no-repeat bg-center "
-      style="background-image: url({img_list[0]});"
-    >
-    <div class="bg-gradient-to-b lg:bg-none from-surface-900/5 to-surface-900 w-full h-full"></div>
-  </section> -->
+  <div class=" hero  h-[96dvh]">
     <section 
       class="mai overflow-hidden h-full w-full bg-gradient-to-b from-surface-900/30 to-surface-900"
     >
@@ -71,14 +69,13 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
   </section>
 
     <section
-      class="hero-text backdrop-blur-lg flex items-center justify-center"
+      class="hero-gradient hero-text backdrop-blur-lg flex items-center justify-center"
     >
     <!-- <button on:click={next}>Click</button> -->
       <div class="p-4 flex flex-col gap-8 items-center">
-        <h2 class="text-sm space-x-3">
-          <span>Mouth Organ </span>
-          <span>Flute </span>
-          <span>Classical </span>
+        <h2 class="text-sm space-x-3 flex text-center">
+          <a href="{base}/classes?type=harmonica" class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary   variant-outline-primary block min-w-[12ch] cursor-pointer">Harmonica</a>
+          <a href="{base}/classes?type=flute" class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary   variant-outline-primary block min-w-[12ch] cursor-pointer">Flute</a>
         </h2>
         <h1
           class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none"
@@ -275,4 +272,9 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
       grid-column-end: 6;
     }
   }
+  .hero-gradient {
+		background-image:
+			radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
+			radial-gradient(at 98% 1%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
+	}
 </style>
