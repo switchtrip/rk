@@ -51,9 +51,9 @@ async function final(title, dirName, filename){
 }
 
 const pathToStatic = '../static/'
-const relativeName =  'images/gallery/Workshop_On_Mouth_Organ_2017/';
+const relativeName = "images/gallery/hf17/";
 const title = "Workshop Harmonica 2017";
 const dirName = pathToStatic + relativeName;
-const filename = '../static/data/gallery.json';
+const filename = "../src/lib/data/gallery.json";
 const acceptedImageTypes = ['png', 'jpeg', 'jpg', 'gif', 'svg', 'webp', 'avi'];
 final(title, dirName, filename).then();
