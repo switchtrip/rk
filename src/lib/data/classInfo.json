@@ -1,0 +1,93 @@
+[
+    {
+        "title": "Harmonica",
+        "description": "Mouth Organ is a western Music Instrument also know as harmonica or harp. At Surabhi Music Academy we are teaching on Diatonic,Tremolo and chromatic harmonica.",
+        "classes": [
+            {
+                "title": "Beginners",
+                "lessons": [
+                    "How to hold Harmonica",
+                    "Blowing technique",
+                    "Puckering",
+                    "Vibrato",
+                    "Different Alankars based on different taal"
+                ]
+            },
+            {
+                "title": "Intermediate",
+                "lessons": [
+                    "Tongue Blocking / Tongue Slapping Techniques",
+                    "Bending",
+                    "Trills",
+                    "Playing Filmi Songs on mouth organ"
+                ]
+            },
+            {
+                "title": "Advanced",
+                "lessons": [
+                    "Octave Playing",
+                    "Chords Playing",
+                    "Rhythm Techniques",
+                    "Bending and Overbending",
+                    "Playing songs on karaoke tracks etc.",
+                    "Hindustani Classical ragas on Harmonica"
+                ]
+            }
+        ],
+        "images": [
+            {
+                "url": "images/class-harmonica.webp",
+                "title": "Mouth Organ offline class",
+                "timings": "Timings: Everty Saturday 10am - 12am"
+            },
+            {
+                "url": "images/class-zoom-harmonica.jpeg",
+                "title": "Mouth Organ online class",
+                "timings": "Timings: Everty Saturday 10am - 12am"
+            }
+        ]
+    },
+    {
+        "title": "Flute",
+        "description": "At Surabhi music academy, we follow Pdt. Hariprasad Chaurasia's style of playing Hindustani Classical Music. Natural Bamboo flutes are used for training due to their superb acoustic and tonal qualities.",
+        "classes": [
+            {
+                "title": "Beginners",
+                "lessons": [
+                    "How to hold flute, posture correction",
+                    "Blowing and fingering techniques",
+                    "Various Alankar and practice on Flute",
+                    "Playing Alankar on Flute with Tabla"
+                ]
+            },
+            {
+                "title": "Intermediate",
+                "lessons": [
+                    "Meend and Gamak Techniques on Flute",
+                    "Playing Alankar in different Taals",
+                    "Introduction to Raagdari and playing raga on flute"
+                ]
+            },
+            {
+                "title": "Advanced",
+                "lessons": [
+                    "Hindustani Classical Raga on Flute",
+                    "Proper demonstration of Alap, Jod & Composition playing with tabla",
+                    "Playing Filmi Songs based on Raga"
+                ]
+            }
+        ],
+        "images": [
+            {
+                "url": "images/flute-offline.jpg",
+                "title": "Regular flute class",
+                "timings": "Timings: Everty Saturday 10am - 12am"
+            },
+            {
+                "url": "images/class-zoom-harmonica.jpeg",
+                "title": "Online flute class",
+                "timings": "Timings: Everty Saturday 10am - 12am"
+            }
+        ]
+    }
+]

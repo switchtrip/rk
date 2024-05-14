@@ -161,8 +161,7 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
         Vivek Sonar from the Maihar Gharana ( a senior disciple of Pt.
         Hariprasad Chaurasia), exemplifies virtuosity in both the mouth organ
         and flute, dedicating his life to music, teaching, and the advancement
-        of the Mouth Organ. He has foundation in Hindustani Classical Music
-        since childhood.
+        of the Mouth Organ. 
       </p>
       <p>
         His passion for the instrument gave rise to the annual Harmonica

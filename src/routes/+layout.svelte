@@ -35,7 +35,8 @@
     drawerStore.close();
   }
 
-  onMount(() => {});
+  onMount(()=>{
+  });
 </script>
 
 <svelte:head>
@@ -55,6 +56,7 @@
   <link rel="canonical" href="https://surabhimusic.com/" />
 </svelte:head>
 
+
 <Drawer class="z-50">
   <div class="grid grid-rows-[1fr_auto_1fr] h-full">
     <button
@@ -64,21 +66,13 @@
       <X />
     </button>
     <section class="row-start-2 space-y-4 overflow-y-auto">
-      <Navigation
-        class="grid [&>li>a]:block [&>li>a]:p-[4vh] [&>li>a]:text-center"
-      />
+      <Navigation class="grid [&>li>a]:block [&>li>a]:p-[4vh] [&>li>a]:text-center"/>
     </section>
   </div>
 </Drawer>
 
 <Header />
-{#if $page.url.pathname != "/"}
-  <div class="mt-28">
-    <slot />
-  </div>
-{:else}
-  <slot />
-{/if}
+	<slot />
 <Footer />
 
 <style>

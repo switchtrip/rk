@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { Accordion, AccordionItem } from "@skeletonlabs/skeleton";
 
   export let classDetails;
@@ -37,7 +38,7 @@
     {#each classDetails["images"] as cl}
       <div class="my-10 pb-10 space-y-4 mx-auto w-full md:w-[40vw]">
         <img
-          src={cl.url}
+          src={base}/{cl.url}
           alt={cl.title}
           class="mx-auto w-full aspect-square object-cover"
         />
