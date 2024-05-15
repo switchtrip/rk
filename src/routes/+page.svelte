@@ -54,7 +54,7 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
 </script>
 
 <div bind:this={anim} class="">
-  <div class=" hero  h-[96dvh]">
+  <div class="hero h-[96dvh]">
     <section 
       class="mai overflow-hidden h-full w-full bg-gradient-to-b from-surface-900/30 to-surface-900"
     >
@@ -119,12 +119,10 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
 
 <div class="pt-10 p-4 sm:p-8 md:p-12 space-y-20 max-w-7xl mx-auto">
   <div id="students" class="mt-10 p-4 space-y-4">
-    <a href="{base}/gallery/">
       <div
         class="btn w-20 h-20 rounded-full border-2 border-white bg-left bg-no-repeat bg-cover"
         style="background-image:url('{base}/media/mic.jpeg');"
       ></div>
-    </a>
     <h2 class="h2">Performances</h2>
     <p class="max-w-3xl">
       The academy's annual Harmonica Festival provides students a vibrant

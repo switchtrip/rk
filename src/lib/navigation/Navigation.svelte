@@ -12,8 +12,8 @@
       label: "Classes",
     },
     {
-      href: base + "/gallery",
-      label: "Gallery",
+      href: base + "/events",
+      label: "Events",
     },
     {
       href: base + "/collection",

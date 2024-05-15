@@ -1,5 +1,5 @@
 <script>
-  /** @type {import('../../../routes/gallery/$types').PageData} */
+  /** @type {import('../../../routes/events/$types').PageData} */
   import { base } from "$app/paths";
   import { ChevronLeft, ChevronRight } from "lucide-svelte";
   import { onMount } from "svelte";

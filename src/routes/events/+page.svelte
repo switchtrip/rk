@@ -8,10 +8,8 @@
 
 </script>
 
-<div class="py-10 p-4 sm:p-8 md:p-12 space-y-10 max-w-7xl mx-auto">
-  <div class="pt-10 p-4">
-    <h1 class="h1">Events</h1>
-  </div>
+<div class="pt-24 p-4 sm:p-8 sm:pt-32 lg:pt-36 space-y-10 mx-auto max-w-7xl">
+  <h1 class="h1 font-black">Events</h1>
   {#each galleryList as event}
     <div class=" carousel-gradient card space-y-4">
       <header class="p-4 sm:p-10">
@@ -57,8 +55,11 @@
 
 <style>
   .carousel-gradient {
-		background-image:
-			radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.50) 0px, transparent 50%),
-			radial-gradient(at 100% 100%,  rgba(var(--color-primary-500) / 0.24) 0px, transparent 50%);
+     background-image: 
+     /* linear-gradient(rgba(var(--color-primary-500), rgba(var(--color-error-500)))) */
+			/* radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.50) 0px, transparent 50%),
+			radial-gradient(at 100% 100%,  rgba(var(--color-primary-500) / 0.24) 0px, transparent 50%); */
+			radial-gradient(at 90% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
+			radial-gradient(at 90% 0%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
 	}
 </style>

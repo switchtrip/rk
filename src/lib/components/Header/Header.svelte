@@ -47,7 +47,7 @@
 <svelte:window on:scroll={handleScroll} />
 
 <AppBar
-  class="py-2 fixed top-0 left-0 right-0  z-40 {hidden ? 'hidden' : ''}"
+  class=" mx-auto py-2 fixed top-0 left-0 right-0 z-40 {hidden ? 'hidden' : ''}"
   background=""
 >
   <!-- <AppBar class="py-2 top-0 left-0 right-0 backdrop-blur-sm z-40" background="{$HeaderBg}">  -->
