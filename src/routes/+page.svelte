@@ -44,11 +44,16 @@
     }
   });
 
-  const img_list = [
-    "images/sir_sitting_MO.png",
-    "images/sir_harmonica_flute_students.jpeg",
-    "images/flute_samjh.jpg",
-  ];
+  // const img_list = [
+  //   "images/sir_sitting_MO.png",
+  //   "images/sir_harmonica_flute_students.jpeg",
+  //   "images/flute_samjh.jpg",
+  // ];
+  import im1 from "$lib/assets/sir_sitting_MO.png?enhanced";
+  import im2 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
+  import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
+
+  const img_list = [im1, im2, im3]
 let carouselIndex = 0;
 const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
 </script>
@@ -60,9 +65,9 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
     >
     {#each [img_list[carouselIndex]] as photo (carouselIndex)}
       <!-- {#if index==carouselIndex} -->
-        <img  
+        <enhanced:img  
         in:fade={{duration:900}}
-        class="mask h-full object-cover" src={photo} alt="Performances of Shri Sunil Patil, solo as well as with their students">
+        class="mask h-full object-cover" src={photo} alt="" />
       <!-- {/if}  -->
     {/each}  
 

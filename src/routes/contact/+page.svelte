@@ -9,8 +9,8 @@
 <div class="pt-10 p-4 sm:p-8 md:p-24 space-y-10 max-w-7xl  mx-auto">
 
 <div
-  class="grid md:grid-cols-2 gap-4 justify-center md:justify-normal text-center
-md:text-left pt-10 p-4 sm:p-8 md:p-12"
+  class="grid md:grid-cols-2 md:gap-y-24 gap-12 justify-center md:justify-normal text-center
+md:text-left pt-16 p-4 sm:p-8 md:p-12"
 >
   <h1 class="h1 font-black md:col-span-2">Contact</h1>
 

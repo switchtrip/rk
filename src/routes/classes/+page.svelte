@@ -20,7 +20,7 @@
     <div id="classes" class="space-y-8">
       <h1 class="h1 font-black">Classes</h1>
       <p class="text-sm">
-        Both offline and online classes are available for flute and mouth organ
+        Both offline and online classes are provided by Surbhi Music Academy for all age groups. Depending upon the interest, students can opt for flute or harmonica or both. All classes are primarily taken by the founder of the Academy Shri Sunil Patil.
       </p>
     </div>
     <TabGroup class="p-4">

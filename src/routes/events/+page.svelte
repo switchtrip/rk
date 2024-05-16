@@ -55,11 +55,11 @@
 
 <style>
   .carousel-gradient {
-     background-image: 
+     /* background-image:  */
      /* linear-gradient(rgba(var(--color-primary-500), rgba(var(--color-error-500)))) */
 			/* radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.50) 0px, transparent 50%),
 			radial-gradient(at 100% 100%,  rgba(var(--color-primary-500) / 0.24) 0px, transparent 50%); */
-			radial-gradient(at 90% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
-			radial-gradient(at 90% 0%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
+			/* radial-gradient(at 90% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
+			radial-gradient(at 90% 0%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%); */
 	}
 </style>
