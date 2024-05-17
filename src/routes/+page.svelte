@@ -49,7 +49,7 @@
   //   "images/sir_harmonica_flute_students.jpeg",
   //   "images/flute_samjh.jpg",
   // ];
-  import im1 from "$lib/assets/sir_sitting_MO.png?enhanced";
+  import im1 from "$lib/assets/sir_sitting_MO_hd.png?enhanced";
   import im2 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
   import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
 
