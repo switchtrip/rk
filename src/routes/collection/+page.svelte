@@ -1,11 +1,7 @@
 <script>
-  import Carousel from "svelte-carousel";
+  // import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
 
-  let carousel; // for calling methods of the carousel instance
-  const handleNextClick = () => {
-    carousel.goToNext();
-  };
   import im1 from "$lib/assets/sir_sitting_MO_hd.png?enhanced";
   import im2 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
   import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
@@ -19,11 +15,11 @@
   </div>
 
   {#if browser}
-    <div class="border-white border-2 h-screen w-1/2">
+    <div class="h-screen w-1/2">
       <Carousel bind:this={carousel} 
+      particlesToShow={3}
       arrows={false}
       autoplay
-      autoplayDuration={2000}
       pauseOnFocus
       >
         {#each img_list as src}
