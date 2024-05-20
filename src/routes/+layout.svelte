@@ -12,25 +12,13 @@
   import Footer from "$lib/components/Footer/Footer.svelte";
   import Header from "$lib/components/Header/Header.svelte";
   import { onMount } from "svelte";
+  import social from '$lib/data/social.json';
 
   initializeStores();
 
   const drawerStore = getDrawerStore();
 
   // Drawer Handler
-  function drawerOpen() {
-    const s = {
-      id: "doc-sidenav",
-      // bgDrawer: "bg-purple-900 text-white",
-      // bgBackdrop:
-      //   "bg-gradient-to-tr from-indigo-500/50 via-purple-500/50 to-pink-500/50",
-      width: "w-9/12 md:w-[480px]",
-      padding: "p-0",
-      position: "right",
-    };
-    drawerStore.open(s);
-  }
-
   function drawerClose() {
     drawerStore.close();
   }
@@ -68,6 +56,21 @@
     <section class="row-start-2 space-y-4 overflow-y-auto">
       <Navigation class="grid [&>li>a]:block [&>li>a]:p-[4vh] [&>li>a]:text-center"/>
     </section>
+
+    <section class="flex justify-center items-center gap-2 row-start-3 overflow-y-auto">
+        {#each Object.entries(social) as [keys, sl]}
+          <a
+            class="btn-icon"
+            href={sl.href}
+            target="_blank"
+            rel="noreferrer"
+            title={sl.title}
+          >
+            <i class="fa-brands text-xl {sl.icon}" />
+          </a>
+        {/each}
+    </section>
+
   </div>
 </Drawer>
 

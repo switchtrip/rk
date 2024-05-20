@@ -5,82 +5,121 @@
   import { TextPlugin } from "gsap/dist/TextPlugin";
   import { onMount } from "svelte";
   import { HeaderBg } from "$lib/components/Header/store.js";
-  import { ChevronDown } from "lucide-svelte";
+  import {
+    ChevronDown,
+    Forward,
+    ChevronRight,
+    ChevronLeft,
+  } from "lucide-svelte";
   import { siWindowsterminal } from "simple-icons";
   import Mycarousel from "$lib/components/Carousel/Mycarousel.svelte";
-	import { fade, fly, scale } from 'svelte/transition'
-  import { quintOut } from 'svelte/easing';
-
-
-  let studentsEmbedLink = [
-    {
-      student: "All",
-      title: "Zindagi Milke bitayenge",
-      url: "https://www.youtube.com/embed/15foBS2R5fs?si=CPxrO0N9xDpKS1nQ",
-    },
-    {
-      student: "Anand Kate",
-      title: "Deva Shri Ganesha Deva",
-      url: "https://www.youtube.com/embed/rZG2E_8bTW4?si=5Na2k5A5nTspnOS7",
-    },
-    {
-      student: "Kanhaiya Patel",
-      title: "Raag Jog",
-      url: "https://www.youtube.com/embed/SR5LLrRNEq0?si=I6RoidSi7q76mjiu",
-    },
-    {
-      student: "Anand Kate",
-      title: "Mere dholna sun",
-      url: "https://www.youtube.com/embed/3GAAGCM3QX8?si=bxJqybr4j1pmvxzc",
-    },
-  ];
-
+  import { fade, fly, scale } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
+  import studentsEmbedLink from "$lib/data/youtubeEmbedLinks.json";
+  import emblaCarouselSvelte from "embla-carousel-svelte";
+  import Autoplay from "embla-carousel-autoplay";
+  import AutoScroll from "embla-carousel-auto-scroll";
+  import Fade from "embla-carousel-fade";
   let anim;
-  onMount(() => {
-    let intID = setInterval(next, 3000);
-    setTimeout(clearCarousel, 3000 * 12);
-    function clearCarousel(){
-      clearInterval(intID);
-    }
-  });
 
-  // const img_list = [
-  //   "images/sir_sitting_MO.png",
-  //   "images/sir_harmonica_flute_students.jpeg",
-  //   "images/flute_samjh.jpg",
-  // ];
   import im1 from "$lib/assets/sir_sitting_MO_hd.png?enhanced";
   import im2 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
   import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
 
-  const img_list = [im1, im2, im3]
-let carouselIndex = 0;
-const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
+  const img_list = [im1, im2, im3];
+  const class_list = [
+    "/classes/class1.jpg",
+    "/classes/class2.jpg",
+    "/classes/class3.jpg",
+    "/classes/class4.jpg",
+    "/classes/class5.jpg",
+    "/classes/class6.jpg",
+    "/classes/class7.jpg",
+  ];
+  let emblaApi;
+  let emblaApiClasses;
+
+  function onInit(event) {
+    emblaApi = event.detail;
+  }
+  function next() {
+    if (emblaApi) {
+      emblaApi.scrollNext();
+    }
+  }
+  onMount(() => {
+    setTimeout(() => {
+      const autoplay = emblaApi?.plugins()?.autoplay;
+      if (!autoplay) return;
+
+      autoplay.stop();
+      // const resetOrStop =
+      //   autoplay.options.stopOnInteraction === false
+      //     ? autoplay.reset
+      //     : autoplay.stop
+    }, 5000);
+  });
 </script>
 
 <div bind:this={anim} class="">
   <div class="hero h-[96dvh]">
-    <section 
+    <div class="mai overflow-hidden">
+      <div
+        class="embla h-full flex"
+        use:emblaCarouselSvelte={{
+          options: { loop: true },
+          plugins: [
+            Autoplay({
+              delay: 500,
+              stopOnMouseEnter: true,
+              stopOnInteraction: true,
+            }),
+            Fade(),
+          ],
+        }}
+        on:emblaInit={onInit}
+      >
+        <div class="flex h-full">
+          {#each img_list as src}
+            <div class="relative h-full grow-0 shrink-0 basis-full">
+              <enhanced:img
+                class="mask w-full h-full object-cover"
+                {src}
+                alt=""
+              />
+              <!-- <button class="absolute right-2 top-1/2" on:click={next}><ChevronRight/></button> -->
+            </div>
+          {/each}
+        </div>
+      </div>
+    </div>
+    <!-- <section 
       class="mai overflow-hidden h-full w-full bg-gradient-to-b from-surface-900/30 to-surface-900"
     >
     {#each [img_list[carouselIndex]] as photo (carouselIndex)}
-      <!-- {#if index==carouselIndex} -->
         <enhanced:img  
         in:fade={{duration:900}}
         class="mask h-full object-cover" src={photo} alt="" />
-      <!-- {/if}  -->
     {/each}  
 
-  </section>
+  </section> -->
 
     <section
       class="hero-gradient hero-text backdrop-blur-lg flex items-center justify-center"
     >
-    <!-- <button on:click={next}>Click</button> -->
+      <!-- <button on:click={next}>Click</button> -->
       <div class="p-4 flex flex-col gap-8 items-center">
         <h2 class="text-sm space-x-3 flex text-center">
-          <a href="{base}/classes?type=harmonica" class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary   variant-outline-primary block min-w-[12ch] cursor-pointer">Harmonica</a>
-          <a href="{base}/classes?type=flute" class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary   variant-outline-primary block min-w-[12ch] cursor-pointer">Flute</a>
+          <a
+            href="{base}/classes?type=harmonica"
+            class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary variant-outline-primary block min-w-[12ch] cursor-pointer"
+            >Harmonica</a
+          >
+          <a
+            href="{base}/classes?type=flute"
+            class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary variant-outline-primary block min-w-[12ch] cursor-pointer"
+            >Flute</a
+          >
         </h2>
         <h1
           class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none"
@@ -124,10 +163,10 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
 
 <div class="pt-10 p-4 sm:p-8 md:p-12 space-y-20 max-w-7xl mx-auto">
   <div id="students" class="mt-10 p-4 space-y-4">
-      <div
-        class="btn w-20 h-20 rounded-full border-2 border-white bg-left bg-no-repeat bg-cover"
-        style="background-image:url('{base}/media/mic.jpeg');"
-      ></div>
+    <div
+      class="btn w-20 h-20 rounded-full border-2 border-white bg-left bg-no-repeat bg-cover"
+      style="background-image:url('{base}/media/mic.jpeg');"
+    ></div>
     <h2 class="h2">Performances</h2>
     <p class="max-w-3xl">
       The academy's annual Harmonica Festival provides students a vibrant
@@ -164,7 +203,7 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
         Vivek Sonar from the Maihar Gharana ( a senior disciple of Pt.
         Hariprasad Chaurasia), exemplifies virtuosity in both the mouth organ
         and flute, dedicating his life to music, teaching, and the advancement
-        of the Mouth Organ. 
+        of the Mouth Organ.
       </p>
       <p>
         His passion for the instrument gave rise to the annual Harmonica
@@ -185,8 +224,8 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
   <div id="classes" class="pt-10 p-4 space-y-8">
     <!-- <div  class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-top-right  bg-no-repeat bg-cover" style="background-image:url('{base}/media/flute.jpeg');"> -->
     <div
-      class="w-20 h-20 rounded-full border-2 border-yellow-600 bg-center bg-no-repeat bg-cover"
-      style="background-image:url('{base}/media/classes.jpeg');"
+      class="w-20 h-20 rounded-full border-2 border-teal-800 bg-center bg-no-repeat bg-cover"
+      style="background-image:url('{base}/media/mor_pankh.jpeg');"
     >
       <!-- Photo by <a href="https://unsplash.com/@saubhagya2304?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saubhagya gandharv</a> on <a href="https://unsplash.com/photos/A76xbfOeR5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
     </div>
@@ -197,7 +236,46 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
       Both online and offline classes for Flute and Mouth organ are provided by
       Surabhi Music Academy.
     </p>
-    <div class="flex flex-col md:flex-row justify-around my-10 pb-10">
+
+    <div
+      class="overflow-hidden"
+      use:emblaCarouselSvelte={{
+        options: { loop: true },
+        plugins: [
+          // Autoplay({ delay: 500, stopOnMouseEnter: true, stopOnInteraction: true }),
+          AutoScroll({ playOnInit: true, stopOnInteraction: false, speed: 6 }),
+        ],
+      }}
+      on:emblaInit={(event) => {
+        emblaApiClasses = event.detail;
+      }}
+    >
+      <div class="flex h-[300px] sm:h-[400px]">
+        {#each class_list as src}
+          <div class="h-full grow-0 shrink-0 basis-11/12 sm:basis-1/3">
+            <img class="pl-5 w-full h-full object-cover" {src} alt="" />
+          </div>
+        {/each}
+      </div>
+
+      <section class="flex flex-row-reverse gap-3 mt-8">
+        <button
+          class="btn-icon variant-outline-primary"
+          on:click={() => {
+            emblaApiClasses.scrollNext();
+          }}><ChevronRight /></button
+        >
+
+        <button
+          class="btn-icon variant-outline-primary"
+          on:click={() => {
+            emblaApiClasses.scrollPrev();
+          }}><ChevronLeft /></button
+        >
+      </section>
+    </div>
+
+    <!-- <div class="flex flex-col md:flex-row justify-around my-10 pb-10">
       <div class="max-w-[80vw] md:max-w-[30vw] mx-auto my-4 space-y-8">
         <img
           src="{base}/images/class-harmonica.webp"
@@ -215,7 +293,7 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
         />
         <h3 class="h3">Zoom Class</h3>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -227,7 +305,7 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
   }
   .mai {
     grid-row-start: 1;
-    grid-row-end: 6;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 1;
     /* background-image: url(images/sir_ph.jpeg); */
@@ -252,8 +330,12 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
       rgba(242, 50, 10, 1) 100%
     );
   }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
   @media (min-width: 800px) {
-    .mask{
+    .mask {
       mask-image: none;
     }
     .hero {
@@ -275,8 +357,15 @@ const next=()=>carouselIndex = (carouselIndex + 1) % img_list.length;
     }
   }
   .hero-gradient {
-		background-image:
-			radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
-			radial-gradient(at 98% 1%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
-	}
+    background-image: radial-gradient(
+        at 0% 0%,
+        rgba(var(--color-secondary-500) / 0.33) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 98% 1%,
+        rgba(var(--color-error-500) / 0.33) 0px,
+        transparent 50%
+      );
+  }
 </style>

@@ -1,4 +1,9 @@
 {
+    "youtube1": {
+        "title": "YouTube Academy",
+        "href": "https://www.youtube.com/@surabhimusic6581",
+        "icon": "fa-youtube"
+    },
     "instagram": {
         "title": "Instagram",
         "href": "https://www.instagram.com/sunilpatilpune",
@@ -8,11 +13,6 @@
         "title": "Facebook",
         "href": "https://www.facebook.com/people/Surabhi-Music-Academy/100063698980654/",
         "icon": "fa-facebook"
-    },
-    "youtube1": {
-        "title": "YouTube Academy",
-        "href": "https://www.youtube.com/@surabhimusic6581",
-        "icon": "fa-youtube"
     },
     "youtube2": {
         "title": "YouTube Sunil Patil",

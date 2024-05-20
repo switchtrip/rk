@@ -1,5 +1,4 @@
 <script>
-  // import Carousel from "svelte-carousel";
   import { browser } from "$app/environment";
 
   import im1 from "$lib/assets/sir_sitting_MO_hd.png?enhanced";
@@ -14,22 +13,6 @@
     <h1 class="h1 font-black space-y-8">Collections</h1>
   </div>
 
-  {#if browser}
-    <div class="h-screen w-1/2">
-      <Carousel bind:this={carousel} 
-      particlesToShow={3}
-      arrows={false}
-      autoplay
-      pauseOnFocus
-      >
-        {#each img_list as src}
-          <div class="h-full w-full border-2 border-teal-400">
-            <enhanced:img {src} class="h-full w-full object-cover" />
-          </div>
-        {/each}
-      </Carousel>
-    </div>
-  {/if}
 </div>
 
 <style>

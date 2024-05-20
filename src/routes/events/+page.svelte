@@ -5,6 +5,7 @@
   import { page } from "$app/stores";
   import Mycarousel from "$lib/components/Carousel/Mycarousel.svelte";
   import galleryList from "$lib/data/gallery.json";
+  import { GalleryVertical, Images } from "lucide-svelte";
 
 </script>
 
@@ -29,6 +30,11 @@
               Date: {event.Date}
             </p>
           {/if}
+        </div>
+        <div class="flex flex-row-reverse">
+        <a class="btn btn-icon" href="{$page.url.pathname}/{event.eventName}">
+          <Images />
+        </a>
         </div>
       </header>
       <Mycarousel>
