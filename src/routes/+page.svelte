@@ -28,13 +28,13 @@
 
   const img_list = [im1, im2, im3];
   const class_list = [
-    "{base}/classes/class1.jpg",
-    "{base}/classes/class2.jpg",
-    "{base}/classes/class3.jpg",
-    "{base}/classes/class4.jpg",
-    "{base}/classes/class5.jpg",
-    "{base}/classes/class6.jpg",
-    "{base}/classes/class7.jpg",
+    "/classes/class1.jpg",
+    "/classes/class2.jpg",
+    "/classes/class3.jpg",
+    "/classes/class4.jpg",
+    "/classes/class5.jpg",
+    "/classes/class6.jpg",
+    "/classes/class7.jpg",
   ];
   let emblaApi;
   let emblaApiClasses;
@@ -253,7 +253,7 @@
       <div class="flex h-[300px] sm:h-[400px]">
         {#each class_list as src}
           <div class="h-full grow-0 shrink-0 basis-11/12 sm:basis-1/3">
-            <img class="pl-5 w-full h-full object-cover" {src} alt="" />
+            <img class="pl-5 w-full h-full object-cover" src="{base}{src}" alt="" />
           </div>
         {/each}
       </div>
