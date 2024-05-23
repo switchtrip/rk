@@ -1,5 +1,64 @@
 [
     {
+        "eventName": "Online Webinars during COVID",
+        "eventLocation": "Online",
+        "Date": "2020",
+        "images": [
+            {
+                "url": "images/gallery/OnlineWebinars/1.jpg",
+                "caption": "images/gallery/OnlineWebinars/1.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/2.jpg",
+                "caption": "images/gallery/OnlineWebinars/2.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/3.jpg",
+                "caption": "images/gallery/OnlineWebinars/3.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/4.jpg",
+                "caption": "images/gallery/OnlineWebinars/4.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/5.jpg",
+                "caption": "images/gallery/OnlineWebinars/5.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/6.jpg",
+                "caption": "images/gallery/OnlineWebinars/6.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/7.jpg",
+                "caption": "images/gallery/OnlineWebinars/7.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/8.jpg",
+                "caption": "images/gallery/OnlineWebinars/8.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/9.jpg",
+                "caption": "images/gallery/OnlineWebinars/9.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/10.jpg",
+                "caption": "images/gallery/OnlineWebinars/10.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/11.jpg",
+                "caption": "images/gallery/OnlineWebinars/11.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/12.jpg",
+                "caption": "images/gallery/OnlineWebinars/12.jpg"
+            },
+            {
+                "url": "images/gallery/OnlineWebinars/13.jpg",
+                "caption": "images/gallery/OnlineWebinars/13.jpg"
+            }
+        ]
+    },
+    {
         "eventName": "Harmonica Festival 2019",
         "eventLocation": "Pdt. Bhimsen Joshi Auditorium, Aundh, Pune",
         "Date": "8th December, 2019",
@@ -29,8 +88,8 @@
                 "caption": "images/gallery/hf19/6.jpeg"
             },
             {
-                "url": "images/gallery/hf19/7.jpeg",
-                "caption": "images/gallery/hf19/7.jpeg"
+                "url": "images/gallery/hf19/.jpeg",
+                "caption": "images/gallery/hf19/.jpeg"
             },
             {
                 "url": "images/gallery/hf19/8.jpeg",
@@ -161,6 +220,41 @@
         ]
     },
     {
+        "eventName": "Mouth Organ Workshop Nashik",
+        "eventLocation": "Nashik",
+        "Date": "18th May, 2019",
+        "images": [
+            {
+                "url": "images/gallery/NashikWorkshop/1.jpg",
+                "caption": "images/gallery/NashikWorkshop/1.jpg"
+            },
+            {
+                "url": "images/gallery/NashikWorkshop/2.jpg",
+                "caption": "images/gallery/NashikWorkshop/2.jpg"
+            },
+            {
+                "url": "images/gallery/NashikWorkshop/7.jpg",
+                "caption": "images/gallery/NashikWorkshop/7.jpg"
+            },
+            {
+                "url": "images/gallery/NashikWorkshop/3.jpg",
+                "caption": "images/gallery/NashikWorkshop/3.jpg"
+            },
+            {
+                "url": "images/gallery/NashikWorkshop/4.jpg",
+                "caption": "images/gallery/NashikWorkshop/4.jpg"
+            },
+            {
+                "url": "images/gallery/NashikWorkshop/5.jpg",
+                "caption": "images/gallery/NashikWorkshop/5.jpg"
+            },
+            {
+                "url": "images/gallery/NashikWorkshop/6.jpg",
+                "caption": "images/gallery/NashikWorkshop/6.jpg"
+            }
+        ]
+    },
+    {
         "eventName": "Harmonica Festival 2018",
         "eventLocation": "Pdt. Bhimsen Joshi Auditorium, Aundh, Pune",
         "Date": "9th December, 2018",
@@ -236,6 +330,37 @@
             {
                 "url": "images/gallery/hf18/18.jpg",
                 "caption": "images/gallery/hf18/18.jpg"
+            }
+        ]
+    },
+    {
+        "eventName": "Mouth Organ Workshop Nagpur",
+        "eventLocation": "Nagpur",
+        "Date": "2nd September, 2018",
+        "images": [
+            {
+                "url": "images/gallery/NagpurWorkshop/1.jpg",
+                "caption": "images/gallery/NagpurWorkshop/1.jpg"
+            },
+            {
+                "url": "images/gallery/NagpurWorkshop/2.jpg",
+                "caption": "images/gallery/NagpurWorkshop/2.jpg"
+            },
+            {
+                "url": "images/gallery/NagpurWorkshop/3.jpg",
+                "caption": "images/gallery/NagpurWorkshop/3.jpg"
+            },
+            {
+                "url": "images/gallery/NagpurWorkshop/4.jpg",
+                "caption": "images/gallery/NagpurWorkshop/4.jpg"
+            },
+            {
+                "url": "images/gallery/NagpurWorkshop/5.jpg",
+                "caption": "images/gallery/NagpurWorkshop/5.jpg"
+            },
+            {
+                "url": "images/gallery/NagpurWorkshop/6.jpg",
+                "caption": "images/gallery/NagpurWorkshop/6.jpg"
             }
         ]
     },
@@ -449,44 +574,44 @@
         ]
     },
     {
-"eventName": "Harmonica Festival 2016",
-"images": [
-    {
-        "url": "images/gallery/hf16/1.jpg",
-        "caption": "images/gallery/hf16/1.jpg"
+        "eventName": "Harmonica Festival 2016",
+        "images": [
+            {
+                "url": "images/gallery/hf16/1.jpg",
+                "caption": "images/gallery/hf16/1.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/2.jpg",
+                "caption": "images/gallery/hf16/2.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/3.jpg",
+                "caption": "images/gallery/hf16/3.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/4.jpg",
+                "caption": "images/gallery/hf16/4.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/5.jpg",
+                "caption": "images/gallery/hf16/5.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/6.jpg",
+                "caption": "images/gallery/hf16/6.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/7.jpg",
+                "caption": "images/gallery/hf16/7.jpg"
+            },
+            {
+                "url": "images/gallery/hf16/8.jpg",
+                "caption": "images/gallery/hf16/8.jpg"
+            }
+        ]
     },
     {
-        "url": "images/gallery/hf16/2.jpg",
-        "caption": "images/gallery/hf16/2.jpg"
-    },
-    {
-        "url": "images/gallery/hf16/3.jpg",
-        "caption": "images/gallery/hf16/3.jpg"
-    },
-    {
-        "url": "images/gallery/hf16/4.jpg",
-        "caption": "images/gallery/hf16/4.jpg"
-    },
-    {
-        "url": "images/gallery/hf16/5.jpg",
-        "caption": "images/gallery/hf16/5.jpg"
-    },
-    {
-        "url": "images/gallery/hf16/6.jpg",
-        "caption": "images/gallery/hf16/6.jpg"
-    },
-    {
-        "url": "images/gallery/hf16/7.jpg",
-        "caption": "images/gallery/hf16/7.jpg"
-    },
-    {
-        "url": "images/gallery/hf16/8.jpg",
-        "caption": "images/gallery/hf16/8.jpg"
-    }
-]
-},
-{
-"eventName": "Flute Workshop 2014",
+        "eventName": "Flute Workshop 2014",
         "images": [
             {
                 "url": "images/gallery/FluteWorkshop2014/surabhi_music_flute_workshop_1.jpg",

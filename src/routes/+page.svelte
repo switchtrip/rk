@@ -252,7 +252,7 @@
     >
       <div class="flex h-[300px] sm:h-[400px]">
         {#each class_list as src}
-          <div class="h-full grow-0 shrink-0 basis-11/12 sm:basis-1/3">
+          <div class="h-full grow-0 shrink-0 basis-11/12 sm:basis-2/3 md:basis-1/3">
             <img class="pl-5 w-full h-full object-cover" src="{base}{src}" alt="" />
           </div>
         {/each}
