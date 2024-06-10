@@ -48,17 +48,18 @@
     }
   }
   onMount(() => {
-    setTimeout(() => {
-      const autoplay = emblaApi?.plugins()?.autoplay;
-      if (!autoplay) return;
+    // setTimeout(() => {
+    //   const autoplay = emblaApi?.plugins()?.autoplay;
+    //   if (!autoplay) return;
 
-      autoplay.stop();
-      // const resetOrStop =
-      //   autoplay.options.stopOnInteraction === false
-      //     ? autoplay.reset
-      //     : autoplay.stop
-    }, 5000);
-  });
+    //   autoplay.stop();
+    //   // const resetOrStop =
+    //   //   autoplay.options.stopOnInteraction === false
+    //   //     ? autoplay.reset
+    //   //     : autoplay.stop
+    // }, 5000);
+  }
+  );
 </script>
 
 <div bind:this={anim} class="">
