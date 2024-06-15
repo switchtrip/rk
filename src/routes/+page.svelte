@@ -23,8 +23,9 @@
   let anim;
 
   import im1 from "$lib/assets/sir_sitting_MO_hd.png?enhanced";
-  import im2 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
+  import im2 from "$lib/assets/sir_flute_4x_ultrasharp.png?enhanced";
   import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
+  // import im4 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
 
   const img_list = [im1, im2, im3];
   const class_list = [
@@ -45,6 +46,11 @@
   function next() {
     if (emblaApi) {
       emblaApi.scrollNext();
+    }
+  }
+  function prev() {
+    if (emblaApi) {
+      emblaApi.scrollPrev();
     }
   }
   onMount(() => {
@@ -72,7 +78,7 @@
           plugins: [
             Autoplay({
               delay: 1000,
-              stopOnMouseEnter: true,
+              // stopOnMouseEnter: true,
               stopOnInteraction: true,
             }),
             Fade(),
@@ -88,7 +94,8 @@
                 {src}
                 alt=""
               />
-              <!-- <button class="absolute right-2 top-1/2" on:click={next}><ChevronRight/></button> -->
+              <button  class="absolute right-2 top-1/2" on:click={next}><ChevronRight size={32} strokeWidth={4.00} color="rgba(255, 255, 255, 0.5)" /></button>
+              <button  class="absolute left-2 top-1/2" on:click={prev}><ChevronLeft size={32} strokeWidth={4.00} color="rgba(255, 255, 255, 0.5)" /></button>
             </div>
           {/each}
         </div>
