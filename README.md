@@ -3,7 +3,7 @@
 Frontend source code for the **Surabhi Music Academy** website.
 
 🌐 **Live Website:** https://surabhimusic.com  
-🚀 **Deployment:** GitHub Pages (`gh-pages`)
+🚀 **Deployment:** GitHub Pages (`gh-pages`) of https://github.com/switchtrip/rk
 
 ---
 
