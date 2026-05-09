@@ -118,7 +118,7 @@
         <h2
           class=" h2 font-medium dark:font-thin text-primary-700-200-token -mt-5"
         >
-        <a href="{base}/about#about" class="a variant-outline-primary p-2 rounded-lg">
+        <a href="{base}/about" class="a variant-outline-primary p-2 rounded-lg">
           Shri Sunil Patil
         </a>
       </div>
