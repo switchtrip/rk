@@ -8,15 +8,14 @@
   const img_list = [im1, im2, im3];
 </script>
 
-<div class="collection-gradient">
   <div class="pt-24 p-4 sm:p-8 sm:pt-32 lg:pt-36 space-y-10 mx-auto max-w-7xl">
     <h1 class="h1 font-black space-y-8">About</h1>
   </div>
 
-  <body>
 
+<div class="pt-10 p-4 sm:p-8 sm:pt-32 lg:pt-36 space-y-10 mx-auto max-w-7xl">
 
-  <div class="container collection-gradient">
+  <div class="collection-gradient">
 
     <div class="hero">
       <h1>Sunil Patil</h1>
@@ -206,7 +205,7 @@
       </p>
     </div>
 
-  </body>
+  </div>
 
 
 
