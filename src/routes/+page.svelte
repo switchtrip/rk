@@ -20,14 +20,14 @@
   import Autoplay from "embla-carousel-autoplay";
   import AutoScroll from "embla-carousel-auto-scroll";
   import Fade from "embla-carousel-fade";
-  let anim;
 
-  import im1 from "$lib/assets/sir_sitting_MO_hd.png?enhanced";
+  import im1 from "$lib/assets/sir_sitting_MO_hd_blurred.png?enhanced";
   import im2 from "$lib/assets/sir_flute_4x_ultrasharp.png?enhanced";
   import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
+  import harmonicafestival2026 from "$lib/assets/harmonicaFes3.jpg?enhanced";
   // import im4 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
 
-  const img_list = [im1, im2, im3];
+  const img_list = [harmonicafestival2026, im1, im2, im3];
   const class_list = [
     "/classes/class1.jpg",
     "/classes/class2.jpg",
@@ -53,23 +53,10 @@
       emblaApi.scrollPrev();
     }
   }
-  onMount(() => {
-    // setTimeout(() => {
-    //   const autoplay = emblaApi?.plugins()?.autoplay;
-    //   if (!autoplay) return;
-
-    //   autoplay.stop();
-    //   // const resetOrStop =
-    //   //   autoplay.options.stopOnInteraction === false
-    //   //     ? autoplay.reset
-    //   //     : autoplay.stop
-    // }, 5000);
-  }
-  );
 </script>
 
-<div bind:this={anim} class="">
-  <div class="hero h-[96dvh]">
+<div  class="">
+  <div class="hero h-[100dvh]">
     <div class="mai overflow-hidden">
       <div
         class="embla h-full flex"
@@ -77,7 +64,7 @@
           options: { loop: true },
           plugins: [
             Autoplay({
-              delay: 1000,
+              delay: 4000,
               // stopOnMouseEnter: true,
               stopOnInteraction: true,
             }),
@@ -89,11 +76,12 @@
         <div class="flex h-full">
           {#each img_list as src}
             <div class="relative h-full grow-0 shrink-0 basis-full">
+            <a href="{base}/events">
               <enhanced:img
-                class="mask w-full h-full object-cover"
-                {src}
+                class="mask w-full h-full object-cover" 
+                src={src}
                 alt=""
-              />
+              /></a>
               <button  class="absolute right-2 top-1/2" on:click={next}><ChevronRight size={32} strokeWidth={4.00} color="rgba(255, 255, 255, 0.5)" /></button>
               <button  class="absolute left-2 top-1/2" on:click={prev}><ChevronLeft size={32} strokeWidth={4.00} color="rgba(255, 255, 255, 0.5)" /></button>
             </div>
@@ -101,21 +89,8 @@
         </div>
       </div>
     </div>
-    <!-- <section 
-      class="mai overflow-hidden h-full w-full bg-gradient-to-b from-surface-900/30 to-surface-900"
-    >
-    {#each [img_list[carouselIndex]] as photo (carouselIndex)}
-        <enhanced:img  
-        in:fade={{duration:900}}
-        class="mask h-full object-cover" src={photo} alt="" />
-    {/each}  
 
-  </section> -->
-
-    <section
-      class="hero-gradient hero-text backdrop-blur-lg flex items-center justify-center"
-    >
-      <!-- <button on:click={next}>Click</button> -->
+    <section class="hero-gradient hero-text backdrop-blur-lg flex items-center justify-center" >
       <div class="p-4 flex flex-col gap-8 items-center">
         <h2 class="text-sm space-x-3 flex text-center">
           <a
@@ -147,25 +122,6 @@
         </h2>
       </div>
     </section>
-    <!-- <div
-      class="row-start-3 row-end-5 grid grid-rows-[1fr_4fr] gap-1 overflow-hidden px-5 md:w-[600px] md:mx-auto lg:w-[900px] lg:mx-auto"
-    >
-      <h2 id="learn" class="h2 text-4xl font-thin self-end">Learn</h2>
-      <h1
-        id="harmonica"
-        class="h1 font-thin text-6xl
-          bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
-      ></h1>
-      <div class="mt-20 flex justify-center">
-        <button class="btn" on:click={()=>window.scroll({
-          top: 800,
-          left: 0,
-          behavior: "smooth",
-        })} >
-            <ChevronDown size="40" />
-        </button>
-      </div>
-    </div> -->
   </div>
 </div>
 

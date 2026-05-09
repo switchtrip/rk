@@ -12,11 +12,14 @@
 
   let tabSet = 0;
   onMount(() => {
-    if ($page.url.searchParams.get("type") == "ws") {
+    if ($page.url.searchParams.get("type") == "ue") {
       tabSet = 1;
     }
-    if ($page.url.searchParams.get("type") == "ot") {
+    if ($page.url.searchParams.get("type") == "ws") {
       tabSet = 2;
+    }
+    if ($page.url.searchParams.get("type") == "ot") {
+      tabSet = 3;
     }
   });
 
@@ -26,28 +29,31 @@
   <h1 class="h1 font-black">Events</h1>
 
     <TabGroup class="p-4">
-      <Tab bind:group={tabSet} name="HF" value={0}>
+      <Tab bind:group={tabSet} name="UE" value={0}>
+        <svelte:fragment slot="lead"></svelte:fragment>
+        <span>Upcoming Events</span>
+      </Tab>
+      <Tab bind:group={tabSet} name="HF" value={1}>
         <svelte:fragment slot="lead"></svelte:fragment>
         <span>Harmonica Festivals</span>
       </Tab>
-      <Tab bind:group={tabSet} name="WS" value={1}>
+      <Tab bind:group={tabSet} name="WS" value={2}>
         <svelte:fragment slot="lead"></svelte:fragment>
         <span>Workshops</span>
       </Tab>
-      <Tab bind:group={tabSet} name="OT" value={2}>
+      <Tab bind:group={tabSet} name="OT" value={3}>
         <svelte:fragment slot="lead"></svelte:fragment>
         <span>Others</span>
       </Tab>
       <svelte:fragment slot="panel">
         {#if tabSet === 0}
-          <!-- <ClassStructure classDetails={classInfo[0]}></ClassStructure> -->
-          <EventStructure eventType={"HF"}></EventStructure>
+          <EventStructure eventType={"UE"}></EventStructure>
         {:else if tabSet === 1}
-          <EventStructure eventType={"WS"}></EventStructure>
-          <!-- <ClassStructure classDetails={classInfo[1]}></ClassStructure> -->
+          <EventStructure eventType={"HF"}></EventStructure>
         {:else if tabSet === 2}
+          <EventStructure eventType={"WS"}></EventStructure>
+        {:else if tabSet === 3}
           <EventStructure eventType={"OT"}></EventStructure>
-            <!-- sdf -->
         {/if}
       </svelte:fragment>
     </TabGroup>

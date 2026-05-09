@@ -88,7 +88,7 @@
     </section>
 
     <section class="flex flex-wrap gap-2 justify-center">
-      <div>&bull; &copy; 2024 Surabhi Music Academy &bull; </div>
+      <div>&bull; &copy; 2026 Surabhi Music Academy &bull; </div>
       <div>Designed & Developed by&nbsp;<a class="anchor" href="https://www.linkedin.com/in/ritesh-kumar-9906921b3/" target="_blank">Ritesh Kumar</a></div>
     </section>
   </div>

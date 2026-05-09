@@ -36,6 +36,16 @@
         </div>
       </header>
       <Mycarousel>
+          {#if event.images.length===1}
+              <a href="{base}/{event.images[0].url}">
+                <img
+                  class=" h-full w-full object-cover block rounded-sm"
+                  loading="lazy"
+                  src="{base}/{event.images[0].url}"
+                  alt={event.images[0].caption}
+                />
+              </a>
+          {:else}
         {#each event.images as image}
           <div
             class="max-w-[90%] md:max-w-[500px] shrink-0 py-4 h-80 md:h-[400px] text-center"
@@ -52,6 +62,7 @@
             {/if}
           </div>
         {/each}
+        {/if}
       </Mycarousel>
     </div>
   {/if}

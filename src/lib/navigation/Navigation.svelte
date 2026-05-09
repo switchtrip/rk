@@ -16,8 +16,8 @@
       label: "Events",
     },
     {
-      href: base + "/collection",
-      label: "Collection",
+      href: base + "/about",
+      label: "About",
     },
     {
       href: base + "/contact",

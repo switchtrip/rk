@@ -1,4 +1,16 @@
 [
+{
+        "eventName": "Harmonica Festival 2026",
+        "eventLocation": "Sahayog Mandir, IMA Hall, Thane-400602",
+        "type": "UE",
+        "Date": "17th May 2026",
+        "images": [
+            {
+                "url": "images/gallery/ue/HarmonicaFestival2026.jpg",
+                "caption": "images/gallery/ue/HarmonicaFestival2026.jpg"
+            }
+            ]
+    },
     {
         "eventName": "Online Webinars during COVID",
         "eventLocation": "Online",
