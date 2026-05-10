@@ -24,7 +24,7 @@
   import im1 from "$lib/assets/sir_sitting_MO_hd_blurred.png?enhanced";
   import im2 from "$lib/assets/sir_flute_4x_ultrasharp.png?enhanced";
   import im3 from "$lib/assets/flute_samjh.jpg?enhanced";
-  import harmonicafestival2026 from "$lib/assets/harmonicaFes3.jpg?enhanced";
+  import harmonicafestival2026 from "$lib/assets/harmonicaFes4.jpg?enhanced";
   // import im4 from "$lib/assets/sir_harmonica_flute_students.jpeg?enhanced";
 
   const img_list = [harmonicafestival2026, im1, im2, im3];
