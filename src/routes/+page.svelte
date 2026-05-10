@@ -64,7 +64,7 @@
           options: { loop: true },
           plugins: [
             Autoplay({
-              delay: 4000,
+              delay: 2500,
               // stopOnMouseEnter: true,
               stopOnInteraction: true,
             }),
