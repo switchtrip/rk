@@ -55,7 +55,7 @@
   }
 </script>
 
-<div  class="">
+<div class="">
   <div class="hero h-[100dvh]">
     <div class="mai overflow-hidden">
       <div
@@ -76,23 +76,46 @@
         <div class="flex h-full">
           {#each img_list as src}
             <div class="relative h-full grow-0 shrink-0 basis-full">
-            <a href="{base}/events">
-              <enhanced:img
-                class="mask w-full h-full object-cover" 
-                src={src}
-                alt=""
-              /></a>
-              <button  class="absolute right-2 top-1/2" on:click={next}><ChevronRight size={32} strokeWidth={4.00} color="rgba(255, 255, 255, 0.5)" /></button>
-              <button  class="absolute left-2 top-1/2" on:click={prev}><ChevronLeft size={32} strokeWidth={4.00} color="rgba(255, 255, 255, 0.5)" /></button>
+              {#if src === harmonicafestival2026}
+                <a href="{base}/events">
+                  <enhanced:img
+                    class="mask w-full h-full object-cover"
+                    {src}
+                    alt=""
+                  /></a
+                >
+              {:else}
+                <enhanced:img
+                  class="mask w-full h-full object-cover"
+                  {src}
+                  alt=""
+                />
+              {/if}
+              <button class="absolute right-2 top-1/2" on:click={next}
+                ><ChevronRight
+                  size={32}
+                  strokeWidth={4.0}
+                  color="rgba(255, 255, 255, 0.5)"
+                /></button
+              >
+              <button class="absolute left-2 top-1/2" on:click={prev}
+                ><ChevronLeft
+                  size={32}
+                  strokeWidth={4.0}
+                  color="rgba(255, 255, 255, 0.5)"
+                /></button
+              >
             </div>
           {/each}
         </div>
       </div>
     </div>
 
-    <section class="hero-gradient hero-text backdrop-blur-lg flex items-center justify-center" >
+    <section
+      class="hero-gradient hero-text backdrop-blur-lg flex items-center justify-center"
+    >
       <div class="p-4 flex flex-col gap-8 items-center">
-        <h2 class="text-sm space-x-3 flex text-center">
+        <!-- <h2 class="text-sm space-x-3 flex text-center">
           <a
             href="{base}/classes?type=harmonica"
             class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary variant-outline-primary block min-w-[12ch] cursor-pointer"
@@ -103,24 +126,28 @@
             class="a p-2 rounded-lg variant-glass-primary hover:variant-filled-primary variant-outline-primary block min-w-[12ch] cursor-pointer"
             >Flute</a
           >
-        </h2>
+        </h2> -->
         <h1
-          class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none"
+          class="font-[Palatine] text-6xl text-[#691f18] dark:text-[#edaa40] leading-none mt-4"
         >
           Surabhi
         </h1>
         <h4
-          class="text-lg text-[#691f18]/80 dark:text-[#edaa40]/40 -mt-8 leading-3"
+          class="text-lg text-[#691f18]/80 dark:text-[#edaa40]/40 -mt-10 leading-3"
         >
           Music Academy
         </h4>
-        <img class="" src="{base}/images/seprator_flute.png" alt="Flute" />
+        <img class="" src="{base}/images/seprator_flute.png" alt="Flute"/>
         <h2
-          class=" h2 font-medium dark:font-thin text-primary-700-200-token -mt-5"
+          class=" h2 font-medium dark:font-thin text-primary-700-200-token -mt-1"
         >
-        <a href="{base}/about" class="a variant-outline-primary p-2 rounded-lg">
-          Shri Sunil Patil
-        </a>
+          <a
+            href="{base}/about"
+            class="a variant-outline-primary p-2 rounded-lg"
+          >
+            Shri Sunil Patil
+          </a>
+        </h2>
       </div>
     </section>
   </div>
@@ -217,8 +244,14 @@
     >
       <div class="flex h-[300px] sm:h-[400px]">
         {#each class_list as src}
-          <div class="h-full grow-0 shrink-0 basis-11/12 sm:basis-2/3 md:basis-1/3">
-            <img class="pl-5 w-full h-full object-cover" src="{base}{src}" alt="" />
+          <div
+            class="h-full grow-0 shrink-0 basis-11/12 sm:basis-2/3 md:basis-1/3"
+          >
+            <img
+              class="pl-5 w-full h-full object-cover"
+              src="{base}{src}"
+              alt=""
+            />
           </div>
         {/each}
       </div>
@@ -274,15 +307,10 @@
     grid-column-start: 1;
     grid-column-end: 1;
     /* background-image: url(images/sir_ph.jpeg); */
-    /* background-image: url(images/sir_anand_sam.jpeg); */
-    /* background-image: url(images/sir_E_base.jpg); */
-    /* background-image: url(images/sir_flute_D.png); */
-    /* background-image: url(images/fulte_samjawaan.jpeg); */
-    /* static/images/fulte_samjawaan.jpeg */
     -webkit-overflow-scrolling: touch;
   }
   .hero-text {
-    grid-row-start: 4;
+    grid-row-start: 5;
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 1;
@@ -290,9 +318,9 @@
   .mask {
     mask-image: linear-gradient(
       0deg,
-      rgba(242, 202, 181, 0) 10%,
-      rgba(164, 110, 18, 0.9) 68%,
-      rgba(242, 50, 10, 1) 100%
+      rgba(242, 202, 181, 0) 0%,
+      rgba(164, 110, 18, 0.9) 0%,
+      rgba(242, 50, 10, 1) 0%
     );
   }
   .embla__slide {
